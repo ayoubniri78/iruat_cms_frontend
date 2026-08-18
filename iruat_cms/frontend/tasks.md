@@ -136,3 +136,26 @@
    - `articleImages` is already a computed from `currentArticle.images`
 
 3. **Verify**: upload 2+ images to the same article — no 23505 error
+
+## M13 — Integrate frontend with hosted backend ✅
+
+> Goal: Frontend talks to `https://iruat-cms.fly.dev` instead of localhost.
+> Backend is deployed at `https://iruat-cms.fly.dev/` — all API endpoints under `/api`.
+
+1. **Update `frontend/.env`**
+   - Add `VITE_API_URL=https://iruat-cms.fly.dev/api`
+
+2. **Update `frontend/vite.config.ts`**
+   - Change proxy target from `http://localhost:3000` to `https://iruat-cms.fly.dev`
+   - This keeps the `/api` prefix working in dev mode
+
+3. **Update `frontend/src/components/images/ImageUploader.vue`**
+   - The raw XHR uses `import.meta.env.VITE_API_URL || '/api'` for the upload URL — already correct after .env change
+   - Verify the auth token header is still attached correctly
+
+4. **Update `backend_cms/src/app.ts` CORS**
+   - Current: `origin: 'http://localhost:4200'` — blocks all deployed frontend requests
+   - Change to: `origin: '*'` (or list the specific frontend domain)
+   - This is required for the integration to work
+
+5. **Test**: Login, load dashboard, create article, upload image — all via the hosted backend
