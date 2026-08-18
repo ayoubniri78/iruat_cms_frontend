@@ -1,0 +1,2157 @@
+<!-- Articles List -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IndigoCMS - Articles</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-fixed": "#e0e3e5",
+                    "surface-container-lowest": "#ffffff",
+                    "outline-variant": "#c7c4d8",
+                    "on-primary-fixed": "#0f0069",
+                    "surface-container-highest": "#d3e4fe",
+                    "error-container": "#ffdad6",
+                    "on-secondary-fixed": "#131b2e",
+                    "surface-bright": "#f8f9ff",
+                    "secondary": "#565e74",
+                    "on-background": "#0b1c30",
+                    "surface": "#f8f9ff",
+                    "outline": "#777587",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "surface-container-high": "#dce9ff",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "tertiary-container": "#5e6163",
+                    "inverse-primary": "#c3c0ff",
+                    "error": "#ba1a1a",
+                    "secondary-fixed": "#dae2fd",
+                    "surface-dim": "#cbdbf5",
+                    "primary": "#3525cd",
+                    "on-tertiary-fixed": "#191c1e",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "on-primary": "#ffffff",
+                    "tertiary": "#46494b",
+                    "on-surface": "#0b1c30",
+                    "on-error": "#ffffff",
+                    "primary-fixed": "#e2dfff",
+                    "inverse-surface": "#213145",
+                    "secondary-container": "#dae2fd",
+                    "on-primary-container": "#dad7ff",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#dadcde",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "inverse-on-surface": "#eaf1ff",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#4f46e5",
+                    "surface-container-low": "#eff4ff",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-secondary-container": "#5c647a",
+                    "on-secondary": "#ffffff",
+                    "surface-container": "#e5eeff",
+                    "background": "#f8f9ff",
+                    "on-surface-variant": "#464555",
+                    "surface-tint": "#4d44e3",
+                    "surface-variant": "#d3e4fe"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "xl": "32px",
+                    "margin": "32px",
+                    "sm": "8px",
+                    "sidebar-width": "280px",
+                    "lg": "24px",
+                    "base": "4px",
+                    "xs": "4px",
+                    "md": "16px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "label-caps": [
+                            "Inter"
+                    ],
+                    "display-lg": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Inter"
+                    ],
+                    "code": [
+                            "jetbrainsMono"
+                    ],
+                    "display-lg-mobile": [
+                            "Inter"
+                    ],
+                    "body-sm": [
+                            "Inter"
+                    ],
+                    "title-sm": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "label-caps": [
+                            "12px",
+                            {
+                                    "lineHeight": "16px",
+                                    "letterSpacing": "0.05em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "display-lg": [
+                            "36px",
+                            {
+                                    "lineHeight": "44px",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "32px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "code": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "display-lg-mobile": [
+                            "28px",
+                            {
+                                    "lineHeight": "34px",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "700"
+                            }
+                    ],
+                    "body-sm": [
+                            "14px",
+                            {
+                                    "lineHeight": "20px",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "title-sm": [
+                            "18px",
+                            {
+                                    "lineHeight": "28px",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "24px",
+                                    "fontWeight": "400"
+                            }
+                    ]
+            }
+    },
+        },
+      }
+    </script>
+</head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased overflow-x-hidden min-h-screen">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center h-14 pl-[280px] pr-xl w-full bg-surface/80 backdrop-blur-md sticky top-0 z-40 border-b border-outline-variant hidden md:flex">
+<div class="flex items-center gap-md">
+<h1 class="font-headline-md text-headline-md font-black text-primary">IndigoCMS</h1>
+</div>
+<div class="flex items-center gap-lg">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-lowest border border-outline-variant rounded-md text-body-sm font-body-sm focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none w-64" placeholder="Search..." type="text"/>
+</div>
+<div class="flex items-center gap-sm text-on-surface-variant">
+<button class="p-2 hover:text-primary transition-all rounded-full hover:bg-surface-container-high active:scale-95 duration-150 flex items-center justify-center">
+<span class="material-symbols-outlined" data-weight="fill">notifications</span>
+</button>
+<button class="p-2 hover:text-primary transition-all rounded-full hover:bg-surface-container-high active:scale-95 duration-150 flex items-center justify-center">
+<span class="material-symbols-outlined">help</span>
+</button>
+<div class="ml-2 w-8 h-8 rounded-full overflow-hidden border border-outline-variant cursor-pointer">
+<img alt="Administrator Profile" class="w-full h-full object-cover" data-alt="A small, professional headshot of an administrator for a CMS dashboard profile picture. High quality, well-lit, neutral background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD23sAc4L35r7dlidumAUemu994LDCsk_CwtVD_DrSTr-rXJ5lECDXqdWm96lgkjzWzD2m7GB4U7CuRk-RxAEFwe4fe8BL9kwa5Zvrk3pf3qZv8l7zRi4-_ZVy4TUTyNk281cCKoa6bVcaTQZtNlNotvQVzEpdhr6Zaef3KOi9z17wdSpIZktyBrAoRRl1xOUei2o_dBbqEeCzlO-cRhmIifxysmTu7T-RvbymiFb0y_b5Tjid0ySAN"/>
+</div>
+</div>
+</div>
+</header>
+<!-- SideNavBar -->
+<nav class="bg-on-background fixed left-0 top-0 h-screen w-sidebar-width shadow-xl flex flex-col py-xl px-md z-50 transition-transform duration-300 transform -translate-x-full md:translate-x-0 overflow-y-auto">
+<div class="mb-lg flex items-center gap-md px-sm">
+<div class="w-10 h-10 rounded-full overflow-hidden border border-surface-variant">
+<img alt="CMS Admin Avatar" class="w-full h-full object-cover" data-alt="A professional headshot avatar for a CMS admin. High resolution, clean corporate style, subtle lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsX1U9pr5lAUNH2vT56dyCCmoIrYirNbfYpZ3BHaX1AOPL8bZKNWvbjgPtPkmKhywd0R_hloj8XTOcmjuS_tGXvug8fdKA3ir-KLg4ANASoS697qomGQb4uGlNvNUtev9n9IGWP_1wrEK16I4xEqrT89fMXIMLpQqHi--NvZSgALb_82M1clYKCEMTnPQVZr7J7UngNuGKMGsnDem3XxM7RhS1deo5o1Mh7Cpv5hbYj2XuuF_L2Ckb"/>
+</div>
+<div>
+<div class="font-display-lg text-display-lg font-bold text-surface-bright text-xl tracking-tight">IndigoCMS</div>
+<div class="font-label-caps text-label-caps text-outline-variant uppercase">Admin Dashboard</div>
+</div>
+</div>
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm py-3 px-4 rounded-lg mb-xl transition-colors duration-200 ease-in-out shadow-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">add</span>
+            Create Article
+        </button>
+<ul class="flex flex-col gap-sm flex-1">
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-outline-variant hover:text-surface-bright hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out font-title-sm text-title-sm" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+                    Dashboard
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-on-primary border-l-4 border-primary bg-on-secondary-fixed-variant/10 font-title-sm text-title-sm" href="#">
+<span class="material-symbols-outlined">description</span>
+                    Articles
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-outline-variant hover:text-surface-bright hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out font-title-sm text-title-sm" href="#">
+<span class="material-symbols-outlined">category</span>
+                    Types
+                </a>
+</li>
+<li>
+<a class="flex items-center gap-3 px-4 py-3 rounded-lg text-outline-variant hover:text-surface-bright hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out font-title-sm text-title-sm" href="#">
+<span class="material-symbols-outlined">settings</span>
+                    Settings
+                </a>
+</li>
+</ul>
+</nav>
+<!-- Main Content -->
+<main class="md:ml-[280px] p-xl max-w-[1440px] mx-auto min-h-[calc(100vh-56px)]">
+<!-- Page Header -->
+<div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-xl gap-4">
+<div>
+<h2 class="font-display-lg text-display-lg text-on-surface">Articles</h2>
+<p class="font-body-md text-body-md text-secondary mt-1">Manage and publish your content.</p>
+</div>
+<button class="bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm py-2 px-6 rounded-lg transition-colors shadow-sm flex items-center gap-2">
+<span class="material-symbols-outlined">add</span>
+                Create Article
+            </button>
+</div>
+<!-- Filter Bar -->
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-md mb-lg shadow-sm flex flex-col sm:flex-row gap-4 items-center justify-between">
+<div class="relative w-full sm:w-96">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-surface border border-outline-variant rounded-lg text-body-md font-body-md focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none transition-colors" placeholder="Search articles..." type="text"/>
+</div>
+<div class="w-full sm:w-auto flex items-center gap-3">
+<span class="font-label-caps text-label-caps text-secondary uppercase whitespace-nowrap">Filter by:</span>
+<select class="w-full sm:w-48 bg-surface border border-outline-variant rounded-lg py-2 pl-3 pr-8 text-body-md font-body-md focus:border-primary focus:ring-1 focus:ring-primary focus:outline-none appearance-none cursor-pointer">
+<option value="all">All Types</option>
+<option value="blog">Blog Post</option>
+<option value="news">News</option>
+<option value="tutorial">Tutorial</option>
+</select>
+<div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-outline sm:relative sm:px-0 sm:-ml-8">
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Data Table Canvas -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-sm overflow-hidden mb-lg">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="border-b border-outline-variant bg-surface-container-low">
+<th class="py-3 px-4 font-label-caps text-label-caps text-secondary uppercase tracking-wider w-16">Image</th>
+<th class="py-3 px-4 font-label-caps text-label-caps text-secondary uppercase tracking-wider">Title</th>
+<th class="py-3 px-4 font-label-caps text-label-caps text-secondary uppercase tracking-wider">Type</th>
+<th class="py-3 px-4 font-label-caps text-label-caps text-secondary uppercase tracking-wider">Author</th>
+<th class="py-3 px-4 font-label-caps text-label-caps text-secondary uppercase tracking-wider">Created</th>
+<th class="py-3 px-4 font-label-caps text-label-caps text-secondary uppercase tracking-wider">Updated</th>
+<th class="py-3 px-4 font-label-caps text-label-caps text-secondary uppercase tracking-wider text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container transition-colors group h-[56px]">
+<td class="py-2 px-4">
+<div class="w-10 h-10 rounded-md overflow-hidden border border-outline-variant">
+<img alt="Thumbnail" class="w-full h-full object-cover" data-alt="A clean, abstract architectural shot serving as an article thumbnail. Modern, bright light mode aesthetic, crisp lines, geometric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJmQ4FvBEJhHyw4_SGXbB6Z4_IZmXZR_xAsWMe-2OV9RBbxySRmrTeYX1SWX1WNuok31SSJvjEkPnF70hxvqFlUk85nlpVAwz-GMAOd2ClgNKmNWYbugL3TWPp9TRGvFLxlIK3BNP4GUq6Owq-TD3mI2O5Ybu9ZR8dOXV_Axwn1p07Ddyt5gbTEbzE9lpFUf0Tm9JiTJ0dJRgk6fi8fSlM5pvfX59chfiUOZzJU_CWA9Qgot3H0P1c"/>
+</div>
+</td>
+<td class="py-2 px-4">
+<div class="font-title-sm text-title-sm text-on-surface line-clamp-1">The Future of Modern Design Systems</div>
+</td>
+<td class="py-2 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded-full bg-primary-fixed text-primary font-label-caps text-label-caps uppercase">Blog</span>
+</td>
+<td class="py-2 px-4 font-body-sm text-body-sm text-secondary">Sarah Jenkins</td>
+<td class="py-2 px-4 font-code text-code text-secondary">Oct 24, 2023</td>
+<td class="py-2 px-4 font-code text-code text-secondary">Oct 25, 2023</td>
+<td class="py-2 px-4 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-secondary hover:text-primary rounded-md hover:bg-surface-container-high transition-colors" title="View">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-primary rounded-md hover:bg-surface-container-high transition-colors" title="Edit">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-error rounded-md hover:bg-error-container transition-colors" title="Delete">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container transition-colors group h-[56px]">
+<td class="py-2 px-4">
+<div class="w-10 h-10 rounded-md overflow-hidden border border-outline-variant bg-surface-container-high flex items-center justify-center">
+<span class="material-symbols-outlined text-secondary">image</span>
+</div>
+</td>
+<td class="py-2 px-4">
+<div class="font-title-sm text-title-sm text-on-surface line-clamp-1">Q3 Financial Results Announced</div>
+</td>
+<td class="py-2 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed-variant font-label-caps text-label-caps uppercase">News</span>
+</td>
+<td class="py-2 px-4 font-body-sm text-body-sm text-secondary">Admin Team</td>
+<td class="py-2 px-4 font-code text-code text-secondary">Oct 18, 2023</td>
+<td class="py-2 px-4 font-code text-code text-secondary">Oct 18, 2023</td>
+<td class="py-2 px-4 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-secondary hover:text-primary rounded-md hover:bg-surface-container-high transition-colors" title="View">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-primary rounded-md hover:bg-surface-container-high transition-colors" title="Edit">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-error rounded-md hover:bg-error-container transition-colors" title="Delete">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container transition-colors group h-[56px]">
+<td class="py-2 px-4">
+<div class="w-10 h-10 rounded-md overflow-hidden border border-outline-variant">
+<img alt="Thumbnail" class="w-full h-full object-cover" data-alt="A minimalist workspace setup with a laptop and coffee cup. Bright, soft lighting, professional and clean aesthetic, suitable for a tutorial article thumbnail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuADQdBKxwbSCFvjBskznym8oovC-fD3PBJGgWYahpiGCcrbgeQ4VdZzg3WrWYEwFBf8-5QVWFd8y78seUP_PvN1gVh1MqlLY6yTAqLUH7jtbuVxO4bDBZmWjCxJNZTbc5BfWTG72_U69KJ5GmcMc_jjFOUcrxPZJErySlPfFcPwKE9NQvIuWBbE7BxgYq9iRrru9ErUbq_XBkJh9KJN9znik6whSZ3ijECSvzMCxa2q3sQZueioF-zq"/>
+</div>
+</td>
+<td class="py-2 px-4">
+<div class="font-title-sm text-title-sm text-on-surface line-clamp-1">Getting Started with Tailwind CSS v3</div>
+</td>
+<td class="py-2 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded-full bg-surface-dim text-on-surface font-label-caps text-label-caps uppercase">Tutorial</span>
+</td>
+<td class="py-2 px-4 font-body-sm text-body-sm text-secondary">David Chen</td>
+<td class="py-2 px-4 font-code text-code text-secondary">Oct 12, 2023</td>
+<td class="py-2 px-4 font-code text-code text-secondary">Oct 15, 2023</td>
+<td class="py-2 px-4 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-secondary hover:text-primary rounded-md hover:bg-surface-container-high transition-colors" title="View">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-primary rounded-md hover:bg-surface-container-high transition-colors" title="Edit">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-error rounded-md hover:bg-error-container transition-colors" title="Delete">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container transition-colors group h-[56px]">
+<td class="py-2 px-4">
+<div class="w-10 h-10 rounded-md overflow-hidden border border-outline-variant">
+<img alt="Thumbnail" class="w-full h-full object-cover" data-alt="Abstract geometric art serving as a blog post thumbnail. Deep blues and vibrant indigos on a light background, conveying technology and structure." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4b6_oRYJ09en5_tVK7Jt2MavCNHehVtpg9xy8RRIKAwFpqG2RhKf3qV3x1Y_7FU9qGlIMvIkJjo8tXDvZWYCCUhXxrbT6Lxv9kCbp4aM7vcWRB_xNsuHdJ6dGRVaDJNHTmhhlN7UCCVIKCQCKzn7Xi8W0wEGwZWfh4HkTCnTI1StxcfR9I7BnfhffiWunQqVjQMwSoH6Le6avF5Y4kG_p7tysIcyCvCLk_uH6yTmQClDju1jlivsC"/>
+</div>
+</td>
+<td class="py-2 px-4">
+<div class="font-title-sm text-title-sm text-on-surface line-clamp-1">Optimizing React Performance in 2024</div>
+</td>
+<td class="py-2 px-4">
+<span class="inline-flex items-center px-2 py-1 rounded-full bg-primary-fixed text-primary font-label-caps text-label-caps uppercase">Blog</span>
+</td>
+<td class="py-2 px-4 font-body-sm text-body-sm text-secondary">Sarah Jenkins</td>
+<td class="py-2 px-4 font-code text-code text-secondary">Oct 05, 2023</td>
+<td class="py-2 px-4 font-code text-code text-secondary">Oct 06, 2023</td>
+<td class="py-2 px-4 text-right">
+<div class="flex items-center justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-secondary hover:text-primary rounded-md hover:bg-surface-container-high transition-colors" title="View">
+<span class="material-symbols-outlined text-sm">visibility</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-primary rounded-md hover:bg-surface-container-high transition-colors" title="Edit">
+<span class="material-symbols-outlined text-sm">edit</span>
+</button>
+<button class="p-1.5 text-secondary hover:text-error rounded-md hover:bg-error-container transition-colors" title="Delete">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination -->
+<div class="px-4 py-3 border-t border-outline-variant bg-surface-container-lowest flex items-center justify-between">
+<div class="font-body-sm text-body-sm text-secondary">
+                    Showing <span class="font-bold text-on-surface">1</span> to <span class="font-bold text-on-surface">4</span> of <span class="font-bold text-on-surface">42</span> results
+                </div>
+<div class="flex gap-1">
+<button class="px-3 py-1 rounded-md border border-outline-variant text-secondary hover:bg-surface-container hover:text-primary transition-colors disabled:opacity-50 disabled:cursor-not-allowed" disabled="">
+                        Previous
+                    </button>
+<button class="px-3 py-1 rounded-md bg-primary-fixed text-primary font-bold border border-primary transition-colors">
+                        1
+                    </button>
+<button class="px-3 py-1 rounded-md border border-outline-variant text-secondary hover:bg-surface-container hover:text-primary transition-colors">
+                        2
+                    </button>
+<button class="px-3 py-1 rounded-md border border-outline-variant text-secondary hover:bg-surface-container hover:text-primary transition-colors">
+                        3
+                    </button>
+<span class="px-2 py-1 text-secondary">...</span>
+<button class="px-3 py-1 rounded-md border border-outline-variant text-secondary hover:bg-surface-container hover:text-primary transition-colors">
+                        Next
+                    </button>
+</div>
+</div>
+</div>
+</main>
+</body></html>
+
+<!-- Dashboard -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IndigoCMS - Dashboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#e0e3e5",
+                      "surface-container-lowest": "#ffffff",
+                      "outline-variant": "#c7c4d8",
+                      "on-primary-fixed": "#0f0069",
+                      "surface-container-highest": "#d3e4fe",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed": "#131b2e",
+                      "surface-bright": "#f8f9ff",
+                      "secondary": "#565e74",
+                      "on-background": "#0b1c30",
+                      "surface": "#f8f9ff",
+                      "outline": "#777587",
+                      "on-primary-fixed-variant": "#3323cc",
+                      "surface-container-high": "#dce9ff",
+                      "on-tertiary-fixed-variant": "#444749",
+                      "tertiary-container": "#5e6163",
+                      "inverse-primary": "#c3c0ff",
+                      "error": "#ba1a1a",
+                      "secondary-fixed": "#dae2fd",
+                      "surface-dim": "#cbdbf5",
+                      "primary": "#3525cd",
+                      "on-tertiary-fixed": "#191c1e",
+                      "tertiary-fixed-dim": "#c4c7c9",
+                      "on-primary": "#ffffff",
+                      "tertiary": "#46494b",
+                      "on-surface": "#0b1c30",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#e2dfff",
+                      "inverse-surface": "#213145",
+                      "secondary-container": "#dae2fd",
+                      "on-primary-container": "#dad7ff",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-container": "#dadcde",
+                      "primary-fixed-dim": "#c3c0ff",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-secondary-fixed-variant": "#3f465c",
+                      "on-tertiary": "#ffffff",
+                      "primary-container": "#4f46e5",
+                      "surface-container-low": "#eff4ff",
+                      "secondary-fixed-dim": "#bec6e0",
+                      "on-secondary-container": "#5c647a",
+                      "on-secondary": "#ffffff",
+                      "surface-container": "#e5eeff",
+                      "background": "#f8f9ff",
+                      "on-surface-variant": "#464555",
+                      "surface-tint": "#4d44e3",
+                      "surface-variant": "#d3e4fe"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "xl": "32px",
+                      "margin": "32px",
+                      "sm": "8px",
+                      "sidebar-width": "280px",
+                      "lg": "24px",
+                      "base": "4px",
+                      "xs": "4px",
+                      "md": "16px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "code": [
+                              "jetbrainsMono"
+                      ],
+                      "display-lg-mobile": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "title-sm": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "36px",
+                              {
+                                      "lineHeight": "44px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "code": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "34px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-screen w-sidebar-width bg-on-background shadow-xl flex flex-col h-full py-xl px-md z-50 hidden md:flex">
+<div class="mb-lg px-sm">
+<h1 class="font-display-lg text-display-lg font-bold text-surface-bright">IndigoCMS</h1>
+<p class="font-body-sm text-body-sm text-outline-variant mt-xs">Admin Dashboard</p>
+</div>
+<div class="flex-1 flex flex-col gap-sm mt-lg">
+<a class="flex items-center gap-md px-sm py-sm rounded-DEFAULT text-on-primary border-l-4 border-primary bg-on-secondary-fixed-variant/10 font-body-md text-body-md hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-md px-sm py-sm rounded-DEFAULT text-outline-variant hover:text-surface-bright font-body-md text-body-md hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out border-l-4 border-transparent" href="#">
+<span class="material-symbols-outlined">description</span>
+                Articles
+            </a>
+<a class="flex items-center gap-md px-sm py-sm rounded-DEFAULT text-outline-variant hover:text-surface-bright font-body-md text-body-md hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out border-l-4 border-transparent" href="#">
+<span class="material-symbols-outlined">category</span>
+                Types
+            </a>
+<a class="flex items-center gap-md px-sm py-sm rounded-DEFAULT text-outline-variant hover:text-surface-bright font-body-md text-body-md hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out border-l-4 border-transparent" href="#">
+<span class="material-symbols-outlined">settings</span>
+                Settings
+            </a>
+</div>
+<div class="mt-auto pt-lg border-t border-on-secondary-fixed-variant/30">
+<button class="w-full flex items-center justify-center gap-sm bg-primary text-on-primary py-sm rounded-lg font-label-caps text-label-caps hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined">add</span>
+                Create Article
+            </button>
+<div class="mt-lg flex items-center gap-md px-sm">
+<img alt="CMS Admin Avatar" class="w-10 h-10 rounded-full object-cover border border-outline-variant/30" data-alt="A small, circular avatar portrait of an administrative user, featuring a professional with a subtle smile in a well-lit studio environment. The style is crisp and modern." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDp2ca2NEp7d1pfJtNPb3ffTk1BMxHnSINyJW0SLolx7Gtw69A2IlXxz6VLL-nLuJ3fL7_w8rlkore61UaDOaS4fP7MP7MUuW5gFdOBts6X-bl1w55ncCuwpUgfxpgrLYn8Y3Pr6HDls1nHYVQLMnpdeMW4tMCpTPvqHirYCUoNdSZLwSOREaaPXBp6sm2HbfDKBHXriUoxDPjcG8exGc1PJwDN7-m4VFZhTAbGbHSeqIr5iWvVj-N3"/>
+<div>
+<p class="font-body-sm text-body-sm text-surface-bright font-semibold">Admin User</p>
+<p class="font-body-sm text-body-sm text-outline-variant text-[12px]">admin@indigo.com</p>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 ml-0 md:ml-sidebar-width flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center h-14 pl-md md:pl-xl pr-xl w-full bg-surface/80 backdrop-blur-md sticky top-0 z-40">
+<div class="flex items-center gap-md w-full max-w-md">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="w-full bg-surface-container-lowest border border-outline-variant rounded-full py-2 pl-10 pr-4 font-body-sm text-body-sm text-on-surface focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary transition-all" placeholder="Search..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<button class="text-on-surface-variant hover:text-primary transition-all active:scale-95 duration-150 relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-all active:scale-95 duration-150">
+<span class="material-symbols-outlined">help</span>
+</button>
+<img alt="Administrator Profile" class="w-8 h-8 rounded-full object-cover border border-outline-variant md:hidden" data-alt="A small, circular avatar portrait of an administrative user, matching the sidebar avatar. The style is crisp, modern, and professional." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjZ5k8ctr4kru6ELEenmidfpdQGBm3s3j0o5wx-Dsr6VH8leqDMgwzXCa3Aw_8rsKouA5QsP3mluiEy8veSTI6-9nR-ueyV_fV8ib05tB9thT3GL9fBR_OK5czIFj8PUimOB9Lap27UzyfmCDsPlS3EjlBougAVI3Wzzg3HVuzNCk1WcSZiRCGWf885TSN52ig_HO8egIDjWRxPSZjAsGu_s_cl-AXIcyGkfu2Sp7AIXBZ4IwzZj_D"/>
+</div>
+</header>
+<!-- Dashboard Content -->
+<div class="p-xl flex-1 max-w-[1440px] mx-auto w-full">
+<div class="flex justify-between items-end mb-lg">
+<div>
+<h2 class="font-headline-md text-headline-md text-on-surface">Dashboard Overview</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Welcome back. Here's what's happening with your content today.</p>
+</div>
+<button class="md:hidden flex items-center justify-center gap-sm bg-primary text-on-primary py-2 px-4 rounded-lg font-label-caps text-label-caps hover:bg-primary/90 transition-colors">
+<span class="material-symbols-outlined">add</span>
+                    Create
+                </button>
+</div>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-md mb-xl">
+<!-- Total Articles Stat -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 rounded-xl p-lg shadow-sm flex flex-col justify-between h-32 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full group-hover:scale-150 transition-transform duration-500 ease-out"></div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Total Articles</p>
+<h3 class="font-display-lg text-display-lg text-on-surface mt-sm">124</h3>
+</div>
+<div class="flex items-center gap-xs text-secondary">
+<span class="material-symbols-outlined text-[16px]">trending_up</span>
+<span class="font-body-sm text-body-sm">+12% this month</span>
+</div>
+</div>
+<!-- Article Types Stat -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 rounded-xl p-lg shadow-sm flex flex-col justify-between h-32 relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-24 h-24 bg-primary/5 rounded-full group-hover:scale-150 transition-transform duration-500 ease-out"></div>
+<div>
+<p class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Article Types</p>
+<h3 class="font-display-lg text-display-lg text-on-surface mt-sm">12</h3>
+</div>
+<div class="flex items-center gap-xs text-outline">
+<span class="material-symbols-outlined text-[16px]">category</span>
+<span class="font-body-sm text-body-sm">4 active categories</span>
+</div>
+</div>
+<!-- Quick Action/Promo Card -->
+<div class="bg-primary text-on-primary rounded-xl p-lg shadow-md flex flex-col justify-between h-32 relative overflow-hidden">
+<div class="absolute right-0 bottom-0 opacity-20 pointer-events-none transform translate-x-1/4 translate-y-1/4">
+<span class="material-symbols-outlined text-9xl">rocket_launch</span>
+</div>
+<div class="relative z-10">
+<h3 class="font-title-sm text-title-sm">Ready to publish?</h3>
+<p class="font-body-sm text-body-sm text-on-primary/80 mt-xs mb-md">Draft a new story right now.</p>
+<a class="inline-flex items-center gap-xs font-label-caps text-label-caps hover:underline" href="#">
+                            Start writing <span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Recent Articles Table -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 rounded-xl shadow-sm overflow-hidden">
+<div class="p-lg border-b border-outline-variant/30 flex justify-between items-center">
+<h3 class="font-title-sm text-title-sm text-on-surface">Recent Articles</h3>
+<a class="font-label-caps text-label-caps text-primary hover:text-primary/80 flex items-center gap-xs" href="#">
+                        View All <span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</a>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="py-sm px-lg font-label-caps text-label-caps text-outline-variant uppercase tracking-wider">Title</th>
+<th class="py-sm px-lg font-label-caps text-label-caps text-outline-variant uppercase tracking-wider">Type</th>
+<th class="py-sm px-lg font-label-caps text-label-caps text-outline-variant uppercase tracking-wider">Date</th>
+<th class="py-sm px-lg font-label-caps text-label-caps text-outline-variant uppercase tracking-wider text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20">
+<tr class="hover:bg-primary-fixed/30 transition-colors group h-[56px]">
+<td class="py-md px-lg">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">article</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">The Future of Minimalist UI</p>
+<p class="font-body-sm text-body-sm text-outline hidden md:block">Exploring design trends for 2025...</p>
+</div>
+</div>
+</td>
+<td class="py-md px-lg">
+<span class="inline-flex items-center px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-label-caps text-[10px]">Blog Post</span>
+</td>
+<td class="py-md px-lg font-body-sm text-body-sm text-on-surface-variant">
+                                    Oct 24, 2023
+                                </td>
+<td class="py-md px-lg text-right">
+<button class="text-outline-variant hover:text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-primary-fixed/30 transition-colors group h-[56px]">
+<td class="py-md px-lg">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">smart_display</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Tutorial: React Hooks</p>
+</div>
+</div>
+</td>
+<td class="py-md px-lg">
+<span class="inline-flex items-center px-2 py-1 rounded bg-tertiary-container text-on-tertiary-container font-label-caps text-[10px] text-white">Video</span>
+</td>
+<td class="py-md px-lg font-body-sm text-body-sm text-on-surface-variant">
+                                    Oct 22, 2023
+                                </td>
+<td class="py-md px-lg text-right">
+<button class="text-outline-variant hover:text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-primary-fixed/30 transition-colors group h-[56px]">
+<td class="py-md px-lg">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">newspaper</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Q3 Product Updates</p>
+</div>
+</div>
+</td>
+<td class="py-md px-lg">
+<span class="inline-flex items-center px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-label-caps text-[10px]">News</span>
+</td>
+<td class="py-md px-lg font-body-sm text-body-sm text-on-surface-variant">
+                                    Oct 15, 2023
+                                </td>
+<td class="py-md px-lg text-right">
+<button class="text-outline-variant hover:text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-primary-fixed/30 transition-colors group h-[56px]">
+<td class="py-md px-lg">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">article</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Understanding CSS Grid</p>
+</div>
+</div>
+</td>
+<td class="py-md px-lg">
+<span class="inline-flex items-center px-2 py-1 rounded bg-secondary-container text-on-secondary-container font-label-caps text-[10px]">Blog Post</span>
+</td>
+<td class="py-md px-lg font-body-sm text-body-sm text-on-surface-variant">
+                                    Oct 10, 2023
+                                </td>
+<td class="py-md px-lg text-right">
+<button class="text-outline-variant hover:text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-primary-fixed/30 transition-colors group h-[56px]">
+<td class="py-md px-lg">
+<div class="flex items-center gap-md">
+<div class="w-10 h-10 rounded bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">description</span>
+</div>
+<div>
+<p class="font-body-md text-body-md text-on-surface font-medium">Draft: Welcome Guide</p>
+</div>
+</div>
+</td>
+<td class="py-md px-lg">
+<span class="inline-flex items-center px-2 py-1 rounded border border-outline-variant text-outline font-label-caps text-[10px]">Draft</span>
+</td>
+<td class="py-md px-lg font-body-sm text-body-sm text-on-surface-variant">
+                                    Oct 08, 2023
+                                </td>
+<td class="py-md px-lg text-right">
+<button class="text-outline-variant hover:text-primary opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</main>
+</body></html>
+
+<!-- Create Article -->
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>IndigoCMS - Create Article</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "tertiary-fixed": "#e0e3e5",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c7c4d8",
+                        "on-primary-fixed": "#0f0069",
+                        "surface-container-highest": "#d3e4fe",
+                        "error-container": "#ffdad6",
+                        "on-secondary-fixed": "#131b2e",
+                        "surface-bright": "#f8f9ff",
+                        "secondary": "#565e74",
+                        "on-background": "#0b1c30",
+                        "surface": "#f8f9ff",
+                        "outline": "#777587",
+                        "on-primary-fixed-variant": "#3323cc",
+                        "surface-container-high": "#dce9ff",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "tertiary-container": "#5e6163",
+                        "inverse-primary": "#c3c0ff",
+                        "error": "#ba1a1a",
+                        "secondary-fixed": "#dae2fd",
+                        "surface-dim": "#cbdbf5",
+                        "primary": "#3525cd",
+                        "on-tertiary-fixed": "#191c1e",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "on-primary": "#ffffff",
+                        "tertiary": "#46494b",
+                        "on-surface": "#0b1c30",
+                        "on-error": "#ffffff",
+                        "primary-fixed": "#e2dfff",
+                        "inverse-surface": "#213145",
+                        "secondary-container": "#dae2fd",
+                        "on-primary-container": "#dad7ff",
+                        "on-error-container": "#93000a",
+                        "on-tertiary-container": "#dadcde",
+                        "primary-fixed-dim": "#c3c0ff",
+                        "inverse-on-surface": "#eaf1ff",
+                        "on-secondary-fixed-variant": "#3f465c",
+                        "on-tertiary": "#ffffff",
+                        "primary-container": "#4f46e5",
+                        "surface-container-low": "#eff4ff",
+                        "secondary-fixed-dim": "#bec6e0",
+                        "on-secondary-container": "#5c647a",
+                        "on-secondary": "#ffffff",
+                        "surface-container": "#e5eeff",
+                        "background": "#f8f9ff",
+                        "on-surface-variant": "#464555",
+                        "surface-tint": "#4d44e3",
+                        "surface-variant": "#d3e4fe"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "xl": "32px",
+                        "margin": "32px",
+                        "sm": "8px",
+                        "sidebar-width": "280px",
+                        "lg": "24px",
+                        "base": "4px",
+                        "xs": "4px",
+                        "md": "16px",
+                        "gutter": "24px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "display-lg": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "code": ["JetBrains Mono"],
+                        "display-lg-mobile": ["Inter"],
+                        "body-sm": ["Inter"],
+                        "title-sm": ["Inter"],
+                        "body-md": ["Inter"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+                        "code": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "display-lg-mobile": ["28px", { "lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "body-sm": ["14px", { "lineHeight": "20px", "fontWeight": "400" }],
+                        "title-sm": ["18px", { "lineHeight": "28px", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "24px", "fontWeight": "400" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { background-color: #F8FAFC; }
+        .depth-1 { box-shadow: 0px 1px 3px rgba(0,0,0,0.1); border: 1px solid #E2E8F0; background-color: #ffffff; }
+        .depth-2 { box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1); background-color: #ffffff; }
+        .input-focus-ring:focus { border-color: #4f46e5; box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.2); outline: none; }
+    </style>
+</head>
+<body class="text-on-background font-body-md antialiased min-h-screen flex">
+<!-- SideNavBar -->
+<nav class="fixed left-0 top-0 h-screen w-sidebar-width bg-on-background dark:bg-on-background shadow-xl flex flex-col py-xl px-md z-50 hidden md:flex">
+<div class="mb-xl px-sm">
+<h1 class="font-display-lg text-display-lg font-bold text-surface-bright">IndigoCMS</h1>
+<p class="font-body-sm text-body-sm text-outline-variant mt-1">Admin Dashboard</p>
+</div>
+<div class="flex-1 space-y-2">
+<a class="flex items-center gap-3 px-3 py-2 rounded-DEFAULT text-outline-variant hover:text-surface-bright hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">dashboard</span>
+<span class="font-title-sm text-title-sm">Dashboard</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-DEFAULT text-on-primary border-l-4 border-primary bg-on-secondary-fixed-variant/10 transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">description</span>
+<span class="font-title-sm text-title-sm">Articles</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-DEFAULT text-outline-variant hover:text-surface-bright hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">category</span>
+<span class="font-title-sm text-title-sm">Types</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-DEFAULT text-outline-variant hover:text-surface-bright hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">settings</span>
+<span class="font-title-sm text-title-sm">Settings</span>
+</a>
+</div>
+<div class="mt-auto">
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm py-3 rounded-lg transition-colors flex justify-center items-center gap-2">
+<span class="material-symbols-outlined">add</span>
+                Create Article
+            </button>
+<div class="mt-lg flex items-center gap-3 px-3 pt-4 border-t border-on-secondary-fixed-variant/30">
+<img alt="CMS Admin Avatar" class="w-10 h-10 rounded-full object-cover" data-alt="A small circular avatar of an administrator with a neutral expression, clean and modern corporate style, light background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDK9EI4RBmppq_YmPbRafuzEAbm-2aWXGF_dDnYWPoWfQbYVTsah7a2yEjVJUFIFIG_DTdHAvyYueM4WwLS2mEqGkvQiqNoE6vNRarowb_qzwlz4FQXdMFCDuZj4yISU5oecVdC6ztHlHOwteuRusxsqT7qqApe4aocoIsL3AoKflB-psjs_2WPfxlXuJzlYrn-6dbdOgfs_GO2QsBBPZgPyeKICu3E5h82up_1TlqxU5IeNuW7WzPL">
+<div>
+<p class="font-title-sm text-title-sm text-surface-bright">Admin User</p>
+<p class="font-body-sm text-body-sm text-outline-variant text-xs">System Administrator</p>
+</div>
+</div>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 flex flex-col md:pl-[280px] min-h-screen">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center h-14 pr-xl pl-xl md:pl-lg w-full bg-surface/80 backdrop-blur-md sticky top-0 z-40 border-b border-outline-variant dark:border-outline flat no shadows">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined md:hidden cursor-pointer">menu</span>
+<div class="relative hidden sm:block">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="pl-10 pr-4 py-1.5 bg-surface-container-low border border-outline-variant rounded-full font-body-sm text-body-sm focus:ring-2 focus:ring-primary focus:border-transparent outline-none w-64 transition-all" placeholder="Search..." type="text">
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:text-primary transition-all active:scale-95 duration-150 relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-0 right-0 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-all active:scale-95 duration-150">
+<span class="material-symbols-outlined">help</span>
+</button>
+<img alt="Administrator Profile" class="w-8 h-8 rounded-full object-cover md:hidden" data-alt="A small circular avatar of an administrator with a neutral expression, clean and modern corporate style, light background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjC-T8jx-0m4UyWGoMiC1G2_bSD7Rx_rkWFzllJHvHMSffQSgJlEcvElf3xosHwfqDNkfr-MkxVX0bOM55ApLFWLatJCi5HtRb__8RuG-hETZNetYSJ01CwNjkO73K85H6d5S1NfDDoL8xzMZe5ybcdPBjX82ixKTmmQ90Jnk_Cb1vaJNY1MP0SO9-vBb-tbbMKfvQe0zdhObkcq3BEbqYozJ20seZrGqkOmuza6uMKyi-iLH__aoc">
+</div>
+</header>
+<!-- Canvas -->
+<div class="p-xl max-w-[1440px] w-full mx-auto flex-1 flex flex-col">
+<div class="mb-lg flex justify-between items-end">
+<div>
+<div class="flex items-center gap-2 text-outline font-body-sm text-body-sm mb-2">
+<a class="hover:text-primary transition-colors" href="#">Articles</a>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="text-on-background">Create New</span>
+</div>
+<h2 class="font-headline-md text-headline-md text-on-background">Create Article</h2>
+</div>
+<div class="flex gap-3">
+<button class="px-4 py-2 border border-outline-variant rounded-lg font-title-sm text-title-sm text-secondary hover:bg-surface-container-low transition-colors">Save Draft</button>
+<button class="px-4 py-2 bg-primary text-on-primary rounded-lg font-title-sm text-title-sm hover:bg-primary-container transition-colors shadow-sm">Publish Article</button>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-lg items-start">
+<!-- Left Column: Primary Form -->
+<div class="lg:col-span-2 space-y-lg">
+<div class="depth-1 rounded-xl p-lg">
+<div class="space-y-6">
+<!-- Title -->
+<div>
+<label class="block font-label-caps text-label-caps text-secondary mb-2 uppercase">Article Title</label>
+<input class="w-full px-4 py-3 border border-outline-variant rounded-lg font-title-sm text-title-sm text-on-background input-focus-ring bg-surface-container-lowest transition-all" placeholder="Enter an engaging title..." type="text" value="The Future of Minimalist Interface Design">
+</div>
+<!-- Slug -->
+<div>
+<label class="block font-label-caps text-label-caps text-secondary mb-2 uppercase">URL Slug</label>
+<div class="flex items-center">
+<span class="px-4 py-2 bg-surface-container-low border border-r-0 border-outline-variant rounded-l-lg font-code text-code text-outline select-none">/articles/</span>
+<input class="w-full px-4 py-2 border border-outline-variant rounded-r-lg font-code text-code text-on-background input-focus-ring bg-surface-container-lowest transition-all" type="text" value="future-of-minimalist-interface-design">
+</div>
+</div>
+<!-- Rich Text Editor Mockup -->
+<div>
+<label class="block font-label-caps text-label-caps text-secondary mb-2 uppercase">Content</label>
+<div class="border border-outline-variant rounded-lg overflow-hidden flex flex-col h-[400px] bg-surface-container-lowest">
+<div class="bg-surface-container-low border-b border-outline-variant p-2 flex gap-1 flex-wrap">
+<button class="p-1.5 rounded hover:bg-outline-variant/30 text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-sm">format_bold</span></button>
+<button class="p-1.5 rounded hover:bg-outline-variant/30 text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-sm">format_italic</span></button>
+<button class="p-1.5 rounded hover:bg-outline-variant/30 text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-sm">format_underlined</span></button>
+<div class="w-px h-6 bg-outline-variant mx-1 my-auto"></div>
+<button class="p-1.5 rounded hover:bg-outline-variant/30 text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-sm">format_h1</span></button>
+<button class="p-1.5 rounded hover:bg-outline-variant/30 text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-sm">format_h2</span></button>
+<div class="w-px h-6 bg-outline-variant mx-1 my-auto"></div>
+<button class="p-1.5 rounded hover:bg-outline-variant/30 text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-sm">format_list_bulleted</span></button>
+<button class="p-1.5 rounded hover:bg-outline-variant/30 text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-sm">format_list_numbered</span></button>
+<div class="w-px h-6 bg-outline-variant mx-1 my-auto"></div>
+<button class="p-1.5 rounded hover:bg-outline-variant/30 text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-sm">link</span></button>
+<button class="p-1.5 rounded hover:bg-outline-variant/30 text-on-surface-variant transition-colors"><span class="material-symbols-outlined text-sm">image</span></button>
+</div>
+<textarea class="flex-1 w-full p-4 resize-none outline-none font-body-md text-body-md text-on-background placeholder:text-outline" placeholder="Start writing your article...">As we move into 2025, the principles of minimalist interface design are evolving. It's no longer just about removing elements, but about optimizing the remaining elements for cognitive clarity and immediate functional value.
+                                    
+The deep slate architectures we see emerging...</textarea>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column: Metadata & Media -->
+<div class="space-y-lg">
+<!-- Metadata Card -->
+<div class="depth-1 rounded-xl p-lg">
+<h3 class="font-headline-md text-headline-md text-on-background mb-4 text-lg">Publishing Details</h3>
+<div class="space-y-4">
+<div>
+<label class="block font-label-caps text-label-caps text-secondary mb-2 uppercase">Article Type</label>
+<div class="relative">
+<select class="w-full px-4 py-2 border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-background appearance-none input-focus-ring bg-surface-container-lowest cursor-pointer">
+<option value="editorial">Editorial / Opinion</option>
+<option value="news">News Update</option>
+<option value="tutorial">Tutorial</option>
+<option selected="" value="case-study">Case Study</option>
+</select>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-secondary mb-2 uppercase">Author</label>
+<div class="relative">
+<select class="w-full px-4 py-2 pl-10 border border-outline-variant rounded-lg font-body-sm text-body-sm text-on-background appearance-none input-focus-ring bg-surface-container-lowest cursor-pointer">
+<option selected="" value="admin">Admin User</option>
+<option value="jdoe">Jane Doe</option>
+<option value="jsmith">John Smith</option>
+</select>
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none text-sm">person</span>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-outline pointer-events-none">expand_more</span>
+</div>
+</div>
+<div class="pt-2 border-t border-outline-variant/50">
+<label class="flex items-center gap-2 cursor-pointer group">
+<div class="relative flex items-center justify-center w-5 h-5 border border-outline-variant rounded bg-surface-container-lowest group-hover:border-primary transition-colors">
+<input class="opacity-0 absolute inset-0 cursor-pointer peer" type="checkbox">
+<span class="material-symbols-outlined text-[16px] text-primary opacity-0 peer-checked:opacity-100 transition-opacity absolute pointer-events-none" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-background select-none">Feature on Homepage</span>
+</label>
+</div>
+</div>
+</div>
+<!-- Image Management Card -->
+<div class="depth-1 rounded-xl p-lg">
+<h3 class="font-headline-md text-headline-md text-on-background mb-4 text-lg">Media</h3>
+<!-- Upload Zone -->
+<div class="border-2 border-dashed border-outline-variant rounded-lg p-6 flex flex-col items-center justify-center text-center bg-surface-container-lowest hover:bg-surface-container-low transition-colors cursor-pointer mb-4 group relative overflow-hidden">
+<input class="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10" title="" type="file">
+<span class="material-symbols-outlined text-4xl text-outline group-hover:text-primary transition-colors mb-2">cloud_upload</span>
+<p class="font-title-sm text-title-sm text-primary mb-1">Click to upload or drag &amp; drop</p>
+<p class="font-body-sm text-body-sm text-outline-variant text-xs">SVG, PNG, JPG or GIF (max. 800x400px)</p>
+</div>
+<!-- Gallery -->
+<div class="grid grid-cols-2 gap-3">
+<!-- Main Image -->
+<div class="relative group rounded-lg overflow-hidden border border-outline-variant aspect-video">
+<img class="w-full h-full object-cover" data-alt="A clean, minimalist workspace setup featuring a modern monitor displaying wireframes, a mechanical keyboard, and a sleek mouse on a dark slate desk mat. Bright, natural lighting from a nearby window creates soft shadows. High resolution, professional photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbkgO-PfAdFvFziKBKkg61DREUAo9GDkUlvo07u-2RDzEBWP6m9bbMHZ_b4sL8SF87oDysrDi7Gz0Cyi37OFu35lIRfXYkTCmcIFLFfmbbrCBSHS6nnwmzKBq0yveAy_x9pXyQ_xCe8LAQqaLjE3mQwUXl2gMpYEu0npedw-iYLvJtxpZcszmXvvYIM42oG5rZnXyiiTUU6NiCQ5uXTdcB4hkQJm56kGHYCSmT9nylVE_Fi8CjRC7W">
+<div class="absolute inset-0 bg-on-background/40 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center gap-2">
+<button class="p-1.5 bg-surface-container-lowest rounded text-error hover:bg-error-container transition-colors shadow-sm" title="Remove">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+<div class="absolute top-2 left-2 bg-primary text-on-primary font-label-caps text-label-caps px-2 py-0.5 rounded uppercase shadow-sm text-[10px]">
+                                    Main Image
+                                </div>
+</div>
+<!-- Additional Image -->
+<div class="relative group rounded-lg overflow-hidden border border-outline-variant aspect-video">
+<img class="w-full h-full object-cover" data-alt="A close-up abstract shot of digital UI elements floating in a subtle 3D space, featuring deep slate backgrounds and vibrant indigo accents. The design communicates modern minimalism and high tech precision. Studio lighting, sharp focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoAlqD-p1JW9r_BlhEnClovIJUg51gtcv9gDme4jJtD2TaQQEtJVaabgPMPbqlIpQECxmXqtPDqLGcjFnP6FvKIYxFOpZBC3hcmWFB61xLpAvF53EF_q6zJlBQbmjaUUlST_OYttKVq6U1sBLzYpm5gbPcDTqddVCmm6FfcDDq88H5SOgWehhtg8AcWU86aW7CZHoyVTqg6cFz2vYiZ8-OkEJPNE-1xJUz_BeLKWvNDs8pv0WuSsZQ">
+<div class="absolute inset-0 bg-on-background/40 opacity-0 group-hover:opacity-100 transition-opacity flex flex-col items-center justify-center gap-2">
+<button class="px-2 py-1 bg-surface-container-lowest rounded text-primary font-label-caps text-label-caps text-[10px] hover:bg-surface-container-low transition-colors shadow-sm uppercase">
+                                        Set as Main
+                                    </button>
+<button class="p-1.5 bg-surface-container-lowest rounded text-error hover:bg-error-container transition-colors shadow-sm" title="Remove">
+<span class="material-symbols-outlined text-sm">delete</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-xl flex justify-end pb-xl md:hidden">
+<button class="w-full px-4 py-3 bg-primary text-on-primary rounded-lg font-title-sm text-title-sm hover:bg-primary-container transition-colors shadow-sm">Publish Article</button>
+</div>
+</div>
+</main>
+<!-- Toast Notification (Success) -->
+
+<style>
+        @keyframes slideIn {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+        }
+    </style>
+
+
+</body></html>
+
+<!-- Article Details -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IndigoCMS - Article Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&amp;family=JetBrains+Mono&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#e0e3e5",
+                      "surface-container-lowest": "#ffffff",
+                      "outline-variant": "#c7c4d8",
+                      "on-primary-fixed": "#0f0069",
+                      "surface-container-highest": "#d3e4fe",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed": "#131b2e",
+                      "surface-bright": "#f8f9ff",
+                      "secondary": "#565e74",
+                      "on-background": "#0b1c30",
+                      "surface": "#f8f9ff",
+                      "outline": "#777587",
+                      "on-primary-fixed-variant": "#3323cc",
+                      "surface-container-high": "#dce9ff",
+                      "on-tertiary-fixed-variant": "#444749",
+                      "tertiary-container": "#5e6163",
+                      "inverse-primary": "#c3c0ff",
+                      "error": "#ba1a1a",
+                      "secondary-fixed": "#dae2fd",
+                      "surface-dim": "#cbdbf5",
+                      "primary": "#3525cd",
+                      "on-tertiary-fixed": "#191c1e",
+                      "tertiary-fixed-dim": "#c4c7c9",
+                      "on-primary": "#ffffff",
+                      "tertiary": "#46494b",
+                      "on-surface": "#0b1c30",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#e2dfff",
+                      "inverse-surface": "#213145",
+                      "secondary-container": "#dae2fd",
+                      "on-primary-container": "#dad7ff",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-container": "#dadcde",
+                      "primary-fixed-dim": "#c3c0ff",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-secondary-fixed-variant": "#3f465c",
+                      "on-tertiary": "#ffffff",
+                      "primary-container": "#4f46e5",
+                      "surface-container-low": "#eff4ff",
+                      "secondary-fixed-dim": "#bec6e0",
+                      "on-secondary-container": "#5c647a",
+                      "on-secondary": "#ffffff",
+                      "surface-container": "#e5eeff",
+                      "background": "#f8f9ff",
+                      "on-surface-variant": "#464555",
+                      "surface-tint": "#4d44e3",
+                      "surface-variant": "#d3e4fe"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "xl": "32px",
+                      "margin": "32px",
+                      "sm": "8px",
+                      "sidebar-width": "280px",
+                      "lg": "24px",
+                      "base": "4px",
+                      "xs": "4px",
+                      "md": "16px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "code": [
+                              "jetbrainsMono"
+                      ],
+                      "display-lg-mobile": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "title-sm": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "36px",
+                              {
+                                      "lineHeight": "44px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "code": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "34px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #F8FAFC;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md h-screen flex overflow-hidden">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col h-full py-xl px-md bg-on-background fixed left-0 top-0 w-sidebar-width shadow-xl z-50 transition-all duration-200 ease-in-out">
+<div class="mb-xl px-sm flex items-center space-x-md">
+<div class="w-10 h-10 rounded-full bg-primary flex items-center justify-center overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A highly detailed professional avatar of a system administrator. The style is modern, minimalist corporate headshot with soft, studio-quality lighting. Clean slate and indigo color accents in the background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-xzRfFcYpbQ0Rk36GO-iuLI5o6zE3-9lUv3T1P0FK3s78NtFmfkOaBdcDzrgcFXzIr28q0BT1O2SFKtwf_h9nmeVllKtcwZ45mSQip0jXFKILF2llTN6rvezHvDSMWOKYvVmAEYW6Qph2fs2uvJBlr7jwOMm9tglIhOLZ4BhkmQD5W9x5ARrQBvIs0i2yW73wshKCaLv89luOubrzihxHj-Dm5NEGF7_rkxKq1u0tdrZ3zYtA4Nrt"/>
+</div>
+<div>
+<h1 class="font-display-lg text-display-lg font-bold text-surface-bright tracking-tight">IndigoCMS</h1>
+<p class="font-body-sm text-body-sm text-outline-variant">Admin Dashboard</p>
+</div>
+</div>
+<ul class="space-y-sm flex-1 mt-md">
+<li>
+<a class="flex items-center space-x-md px-md py-sm rounded-DEFAULT text-outline-variant hover:text-surface-bright hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-title-sm text-title-sm">Dashboard</span>
+</a>
+</li>
+<li>
+<a class="flex items-center space-x-md px-md py-sm rounded-DEFAULT text-on-primary border-l-4 border-primary bg-on-secondary-fixed-variant/10 transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">description</span>
+<span class="font-title-sm text-title-sm">Articles</span>
+</a>
+</li>
+<li>
+<a class="flex items-center space-x-md px-md py-sm rounded-DEFAULT text-outline-variant hover:text-surface-bright hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">category</span>
+<span class="font-title-sm text-title-sm">Types</span>
+</a>
+</li>
+<li>
+<a class="flex items-center space-x-md px-md py-sm rounded-DEFAULT text-outline-variant hover:text-surface-bright hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out" href="#">
+<span class="material-symbols-outlined">settings</span>
+<span class="font-title-sm text-title-sm">Settings</span>
+</a>
+</li>
+</ul>
+<div class="mt-auto pt-xl border-t border-on-secondary-fixed-variant/20">
+<button class="w-full bg-primary hover:bg-primary-container text-on-primary font-title-sm text-title-sm py-sm px-md rounded-DEFAULT flex items-center justify-center space-x-sm transition-all duration-200 active:scale-95 shadow-md">
+<span class="material-symbols-outlined text-[20px]">add</span>
+<span>Create Article</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Wrapper -->
+<main class="flex-1 ml-0 md:ml-sidebar-width flex flex-col h-screen overflow-hidden">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center h-14 px-xl w-full bg-surface/80 backdrop-blur-md sticky top-0 z-40 border-b border-outline-variant">
+<!-- Mobile Menu Toggle (Visible only on small screens) -->
+<button class="md:hidden p-sm -ml-sm text-on-surface hover:bg-surface-container rounded-DEFAULT transition-colors">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<!-- Breadcrumb / Actions Context -->
+<div class="flex items-center space-x-md">
+<button class="flex items-center text-on-surface-variant hover:text-primary transition-colors group">
+<span class="material-symbols-outlined text-[20px] mr-xs group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span class="font-label-caps text-label-caps uppercase">Back to List</span>
+</button>
+</div>
+<!-- Global Actions -->
+<div class="flex items-center space-x-md">
+<button class="p-xs text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-DEFAULT transition-colors">
+<span class="material-symbols-outlined">notifications</span>
+</button>
+<button class="p-xs text-on-surface-variant hover:text-primary hover:bg-surface-container rounded-DEFAULT transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+</div>
+</header>
+<!-- Scrollable Canvas -->
+<div class="flex-1 overflow-y-auto p-margin lg:p-xl w-full max-w-[1440px] mx-auto">
+<!-- Article Header Actions -->
+<div class="flex justify-between items-end mb-lg">
+<div class="flex items-center space-x-sm">
+<span class="bg-surface-container-high text-primary font-label-caps text-label-caps px-sm py-xs rounded-full inline-block uppercase">Technology</span>
+<span class="bg-surface-container-low text-secondary font-label-caps text-label-caps px-sm py-xs rounded-full inline-block uppercase flex items-center"><span class="material-symbols-outlined text-[14px] mr-xs">visibility</span> Published</span>
+</div>
+<button class="bg-surface-container-lowest border border-outline-variant text-on-surface hover:text-primary hover:border-primary font-title-sm text-title-sm py-xs px-md rounded-DEFAULT flex items-center space-x-sm transition-all shadow-[0px_1px_3px_rgba(0,0,0,0.1)]">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+<span>Edit Article</span>
+</button>
+</div>
+<!-- Hero Image & Metadata Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-lg mb-xl">
+<!-- Main Hero Image Area (Spans 2 cols) -->
+<div class="lg:col-span-2 relative rounded-lg overflow-hidden bg-surface-container-lowest border border-outline-variant/50 shadow-[0px_1px_3px_rgba(0,0,0,0.1)] group">
+<div class="aspect-video w-full relative bg-surface-container-high">
+<img class="w-full h-full object-cover" data-alt="A sweeping, hyper-realistic macro shot of a modern computer processor being manufactured. Intricate glowing circuitry pathways illuminated in crisp white and vivid indigo light. The style is highly technical, minimalist, and sleek, conveying advanced computational power and modern enterprise technology. Dark slate background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0AUjitnViSFnvcCZdPAvsgF58vtrtX2pdH5lb9GYYOEpbIDNVErZ0l__ccyWO2oeaTYYfah6esqfZkiIPUIK-y-h178N5ctcJ7iM64ie31WlXJZ7LrHoHTAm3nqMPXIFJv1zBRU2kLRot-KNm_a-vXc0pgDadO_KQsaNxoPFy0fANeq1d3jRe7b1JSoJ3jbC8LqitLULPOFA8AhOOKfLQplGmHVKnChZp4b9_ouwmLlzLq2HNjCUi"/>
+<!-- Pinned Badge for Main Image -->
+<div class="absolute top-md left-md bg-primary text-on-primary font-label-caps text-label-caps uppercase px-sm py-xs rounded flex items-center shadow-md">
+<span class="material-symbols-outlined text-[14px] mr-xs">star</span>
+                            Main Image
+                        </div>
+</div>
+</div>
+<!-- Metadata Card (Spans 1 col) -->
+<div class="bg-surface-container-lowest border border-outline-variant/50 shadow-[0px_1px_3px_rgba(0,0,0,0.1)] rounded-lg p-lg flex flex-col justify-between">
+<div>
+<h2 class="font-display-lg text-display-lg font-bold text-on-surface mb-md leading-tight">The Future of Quantum Compute Architectures in Enterprise Environments</h2>
+<div class="space-y-sm">
+<div class="flex items-start space-x-sm">
+<span class="material-symbols-outlined text-outline text-[20px] mt-xs shrink-0">person</span>
+<div>
+<p class="font-label-caps text-label-caps text-outline uppercase mb-base">Author</p>
+<p class="font-title-sm text-title-sm text-on-surface">Dr. Elena Rostova</p>
+</div>
+</div>
+<div class="h-px w-full bg-outline-variant/30 my-md"></div>
+<div class="flex items-start space-x-sm">
+<span class="material-symbols-outlined text-outline text-[20px] mt-xs shrink-0">calendar_today</span>
+<div>
+<p class="font-label-caps text-label-caps text-outline uppercase mb-base">Created</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Oct 24, 2023 at 14:30 PST</p>
+</div>
+</div>
+<div class="flex items-start space-x-sm mt-sm">
+<span class="material-symbols-outlined text-outline text-[20px] mt-xs shrink-0">update</span>
+<div>
+<p class="font-label-caps text-label-caps text-outline uppercase mb-base">Last Modified</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Nov 02, 2023 at 09:15 PST</p>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-lg pt-lg border-t border-outline-variant/30 flex space-x-sm">
+<span class="bg-surface-container text-on-surface font-code text-code px-sm py-xs rounded border border-outline-variant/50 text-xs">ID: ART-9021</span>
+<span class="bg-surface-container text-on-surface font-code text-code px-sm py-xs rounded border border-outline-variant/50 text-xs flex items-center"><span class="material-symbols-outlined text-[14px] mr-xs">bar_chart</span> 14k views</span>
+</div>
+</div>
+</div>
+<!-- Body Content & Gallery Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-xl">
+<!-- Article Body (Spans 3 cols) -->
+<div class="lg:col-span-3 bg-surface-container-lowest border border-outline-variant/50 shadow-[0px_1px_3px_rgba(0,0,0,0.1)] rounded-lg p-lg md:p-xl">
+<div class="prose max-w-none prose-slate prose-headings:font-headline-md prose-headings:font-bold prose-headings:text-on-surface prose-p:font-body-md prose-p:text-on-surface-variant prose-p:leading-relaxed prose-a:text-primary">
+<p class="text-title-sm font-semibold mb-lg text-on-surface">As enterprise workloads continue to scale in complexity, traditional binary architectures are reaching physical thermal limits. Quantum-assisted compute models offer a potential paradigm shift for cryptographic and complex modeling tasks within the modern data center.</p>
+<h3 class="font-headline-md text-headline-md mb-md mt-lg">Overcoming Coherence Challenges</h3>
+<p class="mb-md font-body-md text-body-md">The primary hurdle in enterprise adoption of quantum systems has been maintaining qubit coherence in noisy environments. Recent advancements in topological error correction have demonstrated significant improvements, allowing for extended coherence times that make practical business applications viable.</p>
+<blockquote class="border-l-4 border-primary pl-md py-sm my-lg bg-surface-container-low rounded-r-lg italic text-on-surface-variant font-body-md">
+                            "We are shifting from a paradigm of hypothetical advantage to demonstrable utility in constrained enterprise scenarios."
+                        </blockquote>
+<p class="mb-md font-body-md text-body-md">Implementation requires a hybrid approach. Traditional classical systems will continue to handle sequential logical operations and I/O tasks, while quantum processors serve as specialized accelerators—similar to how GPUs are utilized today for parallel rendering or machine learning tasks.</p>
+<h3 class="font-headline-md text-headline-md mb-md mt-lg">Infrastructure Requirements</h3>
+<p class="mb-md font-body-md text-body-md">Integrating these systems into existing data centers is non-trivial. The physical footprint, extreme cooling requirements, and specialized power delivery mechanisms demand significant retrofitting.</p>
+<ul class="list-disc pl-lg mb-md space-y-xs font-body-md text-body-md text-on-surface-variant">
+<li>Cryogenic cooling infrastructure capable of sub-Kelvin temperatures.</li>
+<li>Extensive electromagnetic shielding to prevent decoherence.</li>
+<li>High-bandwidth, low-latency interconnects between classical and quantum nodes.</li>
+</ul>
+</div>
+</div>
+<!-- Sidebar Gallery -->
+<div class="lg:col-span-1">
+<h3 class="font-label-caps text-label-caps text-outline uppercase mb-md tracking-wider">Image Gallery (4)</h3>
+<div class="grid grid-cols-2 gap-sm">
+<div class="aspect-square bg-surface-container-high rounded cursor-pointer hover:ring-2 hover:ring-primary transition-all overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" data-alt="A minimalist architectural render of a futuristic server room. Rows of sleek, obsidian black server racks illuminated by subtle white and indigo status lights. Clean, corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDtygljlJS3yQzfOpr4uHiMlVkGiP83mh-yON_N-UpHTVVj0NHCNpdMSY8BMGetqh9ltSIXFAGCKrPEuZIUfE7ZAO2vMafn_7mG81s6XqhNTeBXQXr0-D8y9JKJiUVH5lsF-05XVwlhg8HGh1AqV5DYrL94oJHIlJAzG7IOLDdwAzvNooIlJoheXKSQ_Uc7IeZhoyGo7EDO905NE3jNptrnHtl-ikvVwEqTo8MGuyza5LzLPMvMRNZl"/>
+</div>
+<div class="aspect-square bg-surface-container-high rounded cursor-pointer hover:ring-2 hover:ring-primary transition-all overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" data-alt="A detailed close-up of a quantum computing chandelier inside a cryostat. Intricate gold wiring and reflective metal surfaces. The lighting is cold, clean, and technical." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTWXhKFuXg_zl1-BquNTGYV47iAmcZ-BUT9qVH8bVL4wqWW_4ex6piggOqaoR5OfDbcJoC72VCtPh1qBZKXJznCeNSeXY9Y0SqHS70RoKxmZRNq9HVnmiJag-VycdecPGYqTwhVTMR-3Z0B9PcPFUlt0lWZBSJC42Tcvk5pIBM_jR5XH6SBSjozEVjtpMRm1aenACHwg1zEm2ZZwdyAyduZ9MulwhbFi6cRUyECjU-bXLE7qnhpp7t"/>
+</div>
+<div class="aspect-square bg-surface-container-high rounded cursor-pointer hover:ring-2 hover:ring-primary transition-all overflow-hidden border border-outline-variant/30">
+<img class="w-full h-full object-cover hover:scale-105 transition-transform duration-300" data-alt="A data visualization graphic showing qubit error rates dropping over time. Clean, minimalist chart design using slate grey and vibrant indigo lines against a white background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZ0Lc4faNFs5nj9F0xn45B4o2fpMO9UtwVi_oVMJoeReeR50-smG0Peou7t2PB0V3PuZjicDB3C5RTWTDG3QyiFhOEEE9m00J7R-suBqdMsnCbe46vFKEVu2U3Bqj6rdXN2viuh-51jzHppHQkBw8sMwr44RigdLf-q9qJF9tIQhhqUDqiLaEUH0RmzyNXzDqETThMSk6z7bLRBq5WbsJOE07UTcvHAXossRhaLDMsfZG8sioJGPaF"/>
+</div>
+<div class="aspect-square bg-surface-container-low rounded cursor-pointer hover:ring-2 hover:ring-primary transition-all overflow-hidden border border-outline-variant/30 border-dashed flex flex-col items-center justify-center text-primary hover:bg-surface-container">
+<span class="material-symbols-outlined mb-xs">add_photo_alternate</span>
+<span class="font-label-caps text-label-caps">Add Image</span>
+</div>
+</div>
+</div>
+</div>
+<div class="h-xl w-full"></div> <!-- Bottom padding spacer -->
+</div>
+</main>
+</body></html>
+
+<!-- Manage Types -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IndigoCMS - Article Types</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;family=JetBrains+Mono:wght@400&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "tertiary-fixed": "#e0e3e5",
+                      "surface-container-lowest": "#ffffff",
+                      "outline-variant": "#c7c4d8",
+                      "on-primary-fixed": "#0f0069",
+                      "surface-container-highest": "#d3e4fe",
+                      "error-container": "#ffdad6",
+                      "on-secondary-fixed": "#131b2e",
+                      "surface-bright": "#f8f9ff",
+                      "secondary": "#565e74",
+                      "on-background": "#0b1c30",
+                      "surface": "#f8f9ff",
+                      "outline": "#777587",
+                      "on-primary-fixed-variant": "#3323cc",
+                      "surface-container-high": "#dce9ff",
+                      "on-tertiary-fixed-variant": "#444749",
+                      "tertiary-container": "#5e6163",
+                      "inverse-primary": "#c3c0ff",
+                      "error": "#ba1a1a",
+                      "secondary-fixed": "#dae2fd",
+                      "surface-dim": "#cbdbf5",
+                      "primary": "#3525cd",
+                      "on-tertiary-fixed": "#191c1e",
+                      "tertiary-fixed-dim": "#c4c7c9",
+                      "on-primary": "#ffffff",
+                      "tertiary": "#46494b",
+                      "on-surface": "#0b1c30",
+                      "on-error": "#ffffff",
+                      "primary-fixed": "#e2dfff",
+                      "inverse-surface": "#213145",
+                      "secondary-container": "#dae2fd",
+                      "on-primary-container": "#dad7ff",
+                      "on-error-container": "#93000a",
+                      "on-tertiary-container": "#dadcde",
+                      "primary-fixed-dim": "#c3c0ff",
+                      "inverse-on-surface": "#eaf1ff",
+                      "on-secondary-fixed-variant": "#3f465c",
+                      "on-tertiary": "#ffffff",
+                      "primary-container": "#4f46e5",
+                      "surface-container-low": "#eff4ff",
+                      "secondary-fixed-dim": "#bec6e0",
+                      "on-secondary-container": "#5c647a",
+                      "on-secondary": "#ffffff",
+                      "surface-container": "#e5eeff",
+                      "background": "#f8f9ff",
+                      "on-surface-variant": "#464555",
+                      "surface-tint": "#4d44e3",
+                      "surface-variant": "#d3e4fe"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "xl": "32px",
+                      "margin": "32px",
+                      "sm": "8px",
+                      "sidebar-width": "280px",
+                      "lg": "24px",
+                      "base": "4px",
+                      "xs": "4px",
+                      "md": "16px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "label-caps": [
+                              "Inter"
+                      ],
+                      "display-lg": [
+                              "Inter"
+                      ],
+                      "headline-md": [
+                              "Inter"
+                      ],
+                      "code": [
+                              "jetbrainsMono"
+                      ],
+                      "display-lg-mobile": [
+                              "Inter"
+                      ],
+                      "body-sm": [
+                              "Inter"
+                      ],
+                      "title-sm": [
+                              "Inter"
+                      ],
+                      "body-md": [
+                              "Inter"
+                      ]
+              },
+              "fontSize": {
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "16px",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "display-lg": [
+                              "36px",
+                              {
+                                      "lineHeight": "44px",
+                                      "letterSpacing": "-0.02em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-md": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "code": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "34px",
+                                      "letterSpacing": "-0.01em",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "body-sm": [
+                              "14px",
+                              {
+                                      "lineHeight": "20px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "title-sm": [
+                              "18px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "24px",
+                                      "fontWeight": "400"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+</head>
+<body class="bg-background text-on-background font-body-md antialiased overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="flex justify-between items-center h-14 pl-[280px] pr-xl w-full bg-surface/80 backdrop-blur-md sticky top-0 z-40 border-b border-outline-variant dark:border-outline flat no shadows">
+<div class="flex items-center gap-md">
+<span class="font-headline-md text-headline-md font-black text-primary">IndigoCMS</span>
+<!-- Assuming search_bar: "on_left" logic here, though usually implied as just left side layout -->
+<div class="hidden md:flex items-center ml-lg bg-surface-container-low rounded-full px-4 py-1.5 border border-outline-variant focus-within:border-primary focus-within:ring-1 focus-within:ring-primary/20 transition-all">
+<span class="material-symbols-outlined text-outline text-[20px]">search</span>
+<input class="bg-transparent border-none focus:ring-0 text-body-sm font-body-sm text-on-surface ml-2 w-64 placeholder:text-outline-variant" placeholder="Search..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-lg">
+<div class="flex items-center gap-sm">
+<button class="p-2 rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant hover:text-primary active:scale-95 duration-150 group">
+<span class="material-symbols-outlined text-[24px] group-hover:fill-current">notifications</span>
+</button>
+<button class="p-2 rounded-full hover:bg-surface-container-high transition-colors text-on-surface-variant hover:text-primary active:scale-95 duration-150 group">
+<span class="material-symbols-outlined text-[24px] group-hover:fill-current">help</span>
+</button>
+</div>
+<div class="h-8 w-8 rounded-full bg-surface-container-highest border border-outline-variant overflow-hidden shrink-0 cursor-pointer hover:ring-2 hover:ring-primary/50 transition-all">
+<img alt="Administrator Profile" class="w-full h-full object-cover" data-alt="A professional headshot of a corporate administrator in a bright, modern office setting. High-key lighting, minimalist aesthetic with neutral tones. Light mode UI context." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjviLnUKDbgpmH_HOK_YMkwqxyP_JRPAIm2Fmayz5PDwi5MCJleuGbUBJqpStnpsRokHty2yX_8KCZFwnHi-URBFkIVZaPbNRKW1Nm59Gpp2mNpkM0t2f44YvL1CHZ6j8wCy3Ap8n0KCHX8cyl2NejwH3EIgEsDBKnETNQDwOktN9RwC7RarFUEtclkb52aL3Up3GdJq3xQD3nWDOaTuwZ7zjTDu39j3jcGB7WdAZIjAG_GpHlHcT3"/>
+</div>
+</div>
+</nav>
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-screen w-sidebar-width bg-on-background dark:bg-on-background flex flex-col h-full py-xl px-md shadow-xl z-50">
+<div class="mb-xl px-sm flex items-center gap-sm">
+<div class="w-10 h-10 rounded bg-primary flex items-center justify-center shrink-0">
+<span class="font-display-lg text-display-lg font-bold text-surface-bright text-[20px] leading-none">I</span>
+</div>
+<div>
+<div class="font-title-sm text-title-sm text-on-primary">IndigoCMS</div>
+<div class="font-body-sm text-body-sm text-outline-variant">Admin Dashboard</div>
+</div>
+</div>
+<nav class="flex-1 flex flex-col gap-xs">
+<a class="flex items-center gap-md px-sm py-2 rounded text-outline-variant hover:text-surface-bright hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out font-body-md text-body-md group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-md px-sm py-2 rounded text-outline-variant hover:text-surface-bright hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out font-body-md text-body-md group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">description</span>
+                Articles
+            </a>
+<a class="flex items-center gap-md px-sm py-2 rounded text-on-primary border-l-4 border-primary bg-on-secondary-fixed-variant/10 hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out font-body-md text-body-md group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform" style="font-variation-settings: 'FILL' 1;">category</span>
+                Types
+            </a>
+<a class="flex items-center gap-md px-sm py-2 rounded text-outline-variant hover:text-surface-bright hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out font-body-md text-body-md group" href="#">
+<span class="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="mt-auto pt-lg px-sm">
+<button class="w-full py-2.5 px-4 bg-primary text-on-primary rounded font-title-sm text-title-sm hover:bg-on-primary-fixed-variant transition-colors shadow-sm flex items-center justify-center gap-sm group">
+<span class="material-symbols-outlined text-[20px] group-hover:translate-x-1 transition-transform">add</span>
+                Create Article
+            </button>
+</div>
+</aside>
+<!-- Main Content -->
+<main class="ml-[280px] min-h-screen p-xl max-w-[1440px]">
+<!-- Page Header -->
+<div class="flex justify-between items-end mb-xl">
+<div>
+<h1 class="font-display-lg text-display-lg text-on-surface mb-xs">Article Types</h1>
+<p class="font-body-md text-body-md text-on-surface-variant">Manage categories and classifications for your content.</p>
+</div>
+<button class="bg-primary text-on-primary px-lg py-2.5 rounded font-title-sm text-title-sm hover:bg-primary-container transition-colors shadow-sm flex items-center gap-sm">
+<span class="material-symbols-outlined text-[20px]">add_circle</span>
+                Create Type
+            </button>
+</div>
+<!-- Content Area (Table/List) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant shadow-[0px_1px_3px_rgba(0,0,0,0.1)] overflow-hidden">
+<div class="grid grid-cols-12 gap-4 px-lg py-sm border-b border-outline-variant bg-surface/50 font-label-caps text-label-caps text-tertiary">
+<div class="col-span-3">Title</div>
+<div class="col-span-7">Description</div>
+<div class="col-span-2 text-right">Actions</div>
+</div>
+<div class="divide-y divide-outline-variant/50">
+<!-- Row 1 -->
+<div class="grid grid-cols-12 gap-4 px-lg py-3 items-center hover:bg-surface-container-low transition-colors group h-[56px]">
+<div class="col-span-3 font-title-sm text-title-sm text-on-surface flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-primary-fixed-dim/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]">news</span>
+</div>
+                        News
+                    </div>
+<div class="col-span-7 font-body-sm text-body-sm text-on-surface-variant truncate">
+                        Time-sensitive updates and announcements regarding company events and industry news.
+                    </div>
+<div class="col-span-2 flex justify-end gap-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-outline hover:text-primary rounded hover:bg-primary/10 transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 text-outline hover:text-error rounded hover:bg-error/10 transition-colors" onclick="document.getElementById('delete-dialog').classList.remove('hidden')" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="grid grid-cols-12 gap-4 px-lg py-3 items-center hover:bg-surface-container-low transition-colors group h-[56px]">
+<div class="col-span-3 font-title-sm text-title-sm text-on-surface flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed/50 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[18px]">menu_book</span>
+</div>
+                        Tutorial
+                    </div>
+<div class="col-span-7 font-body-sm text-body-sm text-on-surface-variant truncate">
+                        Step-by-step guides and instructional content for utilizing platform features.
+                    </div>
+<div class="col-span-2 flex justify-end gap-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-outline hover:text-primary rounded hover:bg-primary/10 transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 text-outline hover:text-error rounded hover:bg-error/10 transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+<!-- Row 3 -->
+<div class="grid grid-cols-12 gap-4 px-lg py-3 items-center hover:bg-surface-container-low transition-colors group h-[56px]">
+<div class="col-span-3 font-title-sm text-title-sm text-on-surface flex items-center gap-sm">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed/50 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[18px]">insights</span>
+</div>
+                        Case Study
+                    </div>
+<div class="col-span-7 font-body-sm text-body-sm text-on-surface-variant truncate">
+                        In-depth analysis of specific projects, detailing challenges, solutions, and outcomes.
+                    </div>
+<div class="col-span-2 flex justify-end gap-sm opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="p-1.5 text-outline hover:text-primary rounded hover:bg-primary/10 transition-colors" title="Edit">
+<span class="material-symbols-outlined text-[20px]">edit</span>
+</button>
+<button class="p-1.5 text-outline hover:text-error rounded hover:bg-error/10 transition-colors" title="Delete">
+<span class="material-symbols-outlined text-[20px]">delete</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Empty State / Pagination placeholder if needed later, omitted for clean CRUD view as requested -->
+</div>
+</main>
+<!-- Delete Confirmation Dialog Overlay -->
+<div class="fixed inset-0 z-[100] hidden flex items-center justify-center" id="delete-dialog">
+<!-- Backdrop -->
+<div class="absolute inset-0 bg-on-background/40 backdrop-blur-sm transition-opacity" onclick="document.getElementById('delete-dialog').classList.add('hidden')"></div>
+<!-- Dialog Card -->
+<div class="relative bg-surface-container-lowest w-full max-w-md rounded-xl shadow-[0px_10px_15px_-3px_rgba(0,0,0,0.1)] border border-outline-variant overflow-hidden transform transition-all">
+<div class="p-lg">
+<div class="flex items-center gap-md mb-md">
+<div class="w-12 h-12 rounded-full bg-error-container flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-error text-[24px]">warning</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Delete Article Type</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-xl">
+                    Are you sure you want to delete the <span class="font-bold text-on-surface">"News"</span> type? This action cannot be undone and may affect articles currently using this classification.
+                </p>
+<div class="flex justify-end gap-md">
+<button class="px-md py-2 rounded font-title-sm text-title-sm text-on-surface-variant hover:bg-surface-container-high transition-colors" onclick="document.getElementById('delete-dialog').classList.add('hidden')">
+                        Cancel
+                    </button>
+<button class="px-md py-2 rounded font-title-sm text-title-sm bg-error text-on-error hover:bg-on-error-container transition-colors shadow-sm flex items-center gap-xs">
+<span class="material-symbols-outlined text-[18px]">delete_forever</span>
+                        Confirm Delete
+                    </button>
+</div>
+</div>
+</div>
+</div>
+</body></html>
+
+<!-- Add Image -->
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IndigoCMS - Add New Images</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "inverse-on-surface": "#eaf1ff",
+                    "surface-tint": "#4d44e3",
+                    "primary-fixed": "#e2dfff",
+                    "inverse-surface": "#213145",
+                    "secondary-container": "#dae2fd",
+                    "on-background": "#0b1c30",
+                    "tertiary-fixed-dim": "#c4c7c9",
+                    "primary-fixed-dim": "#c3c0ff",
+                    "surface": "#f8f9ff",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#d3e4fe",
+                    "on-secondary-container": "#5c647a",
+                    "surface-dim": "#cbdbf5",
+                    "tertiary": "#46494b",
+                    "on-primary-fixed-variant": "#3323cc",
+                    "outline-variant": "#c7c4d8",
+                    "error": "#ba1a1a",
+                    "secondary-fixed-dim": "#bec6e0",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "background": "#f8f9ff",
+                    "on-surface": "#0b1c30",
+                    "on-tertiary-container": "#dadcde",
+                    "on-secondary-fixed": "#131b2e",
+                    "primary": "#3525cd",
+                    "on-surface-variant": "#464555",
+                    "secondary-fixed": "#dae2fd",
+                    "on-tertiary-fixed-variant": "#444749",
+                    "primary-container": "#4f46e5",
+                    "secondary": "#565e74",
+                    "surface-bright": "#f8f9ff",
+                    "surface-container-low": "#eff4ff",
+                    "outline": "#777587",
+                    "surface-container": "#e5eeff",
+                    "on-secondary-fixed-variant": "#3f465c",
+                    "surface-container-highest": "#d3e4fe",
+                    "on-primary-fixed": "#0f0069",
+                    "error-container": "#ffdad6",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#5e6163",
+                    "on-tertiary-fixed": "#191c1e",
+                    "inverse-primary": "#c3c0ff",
+                    "on-primary-container": "#dad7ff",
+                    "tertiary-fixed": "#e0e3e5",
+                    "surface-container-high": "#dce9ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "lg": "24px",
+                    "margin": "32px",
+                    "gutter": "24px",
+                    "base": "4px",
+                    "md": "16px",
+                    "xl": "32px",
+                    "sidebar-width": "280px",
+                    "xs": "4px"
+            },
+            "fontFamily": {
+                    "body-md": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-lg-mobile": ["Inter"],
+                    "display-lg": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "title-sm": ["Inter"],
+                    "code": ["jetbrainsMono"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "display-lg-mobile": ["28px", {"lineHeight": "34px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "display-lg": ["36px", {"lineHeight": "44px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "title-sm": ["18px", {"lineHeight": "28px", "fontWeight": "600"}],
+                    "code": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #F8FAFC; }
+    </style>
+</head>
+<body class="bg-background text-on-background min-h-screen flex">
+<!-- SideNavBar -->
+<aside class="fixed left-0 top-0 h-screen w-sidebar-width bg-on-background shadow-xl flex flex-col py-xl px-md z-50">
+<div class="mb-lg">
+<h1 class="font-display-lg text-display-lg font-bold text-surface-bright">IndigoCMS</h1>
+<p class="font-body-md text-body-md text-outline-variant mt-xs">Admin Dashboard</p>
+</div>
+<nav class="flex-1 flex flex-col gap-sm">
+<a class="flex items-center gap-md px-md py-sm rounded text-outline-variant hover:text-surface-bright hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+                Dashboard
+            </a>
+<a class="flex items-center gap-md px-md py-sm rounded text-outline-variant hover:text-surface-bright hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="description">description</span>
+                Articles
+            </a>
+<!-- Active State on Types/Media -->
+<a class="flex items-center gap-md px-md py-sm text-on-primary border-l-4 border-primary bg-on-secondary-fixed-variant/10 font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="category">category</span>
+                Types
+            </a>
+<a class="flex items-center gap-md px-md py-sm rounded text-outline-variant hover:text-surface-bright hover:bg-on-secondary-fixed-variant/5 transition-colors duration-200 ease-in-out font-body-md text-body-md" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+                Settings
+            </a>
+</nav>
+<div class="mt-auto pt-lg border-t border-on-secondary-fixed-variant/20">
+<button class="w-full bg-primary text-on-primary py-sm px-md rounded-lg font-title-sm text-title-sm hover:bg-primary-container transition-colors">
+                Create Article
+            </button>
+</div>
+</aside>
+<!-- Main Content Wrapper -->
+<div class="ml-sidebar-width flex-1 flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="flex justify-between items-center h-14 pl-[28px] pr-xl w-full bg-surface/80 backdrop-blur-md sticky top-0 z-40 border-b border-outline-variant">
+<div class="flex items-center gap-lg">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-sm top-1/2 -translate-y-1/2 text-outline">search</span>
+<input class="pl-xl pr-sm py-sm rounded-lg border border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none font-body-sm text-body-sm text-on-surface" placeholder="Search..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-md">
+<button class="text-on-surface-variant hover:text-primary transition-all active:scale-95 duration-150 p-xs rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-on-surface-variant hover:text-primary transition-all active:scale-95 duration-150 p-xs rounded-full hover:bg-surface-variant">
+<span class="material-symbols-outlined" data-icon="help">help</span>
+</button>
+<div class="w-8 h-8 rounded-full bg-primary-container overflow-hidden ml-sm">
+<img alt="Administrator Profile" class="w-full h-full object-cover" data-alt="A small, circular avatar portrait of a professional system administrator in a clean, brightly lit modern office setting. Sharp focus, corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR6i6cPbYw8tPoH38uS7vIG-e2av2LvBzlXwAHvxdovOgEdBiXOZuoM0y1nhdVcxx52NI33nU7zGRJMCx7REpU5PXaHJzWr3fo5S7YmhX8pME_bw1bqaFg2ZQwBqp4NZLzfN9ryjB8FXZdSqPKIroigxoOLGPNz-ec8CSmvlD3htwegu8ku5iSGNoAdON5JWCs4ZeBWNywWYJ5g_uG3gsMTe7LoVXlNaMQrqFHtsk5rpdepJOAxUew"/>
+</div>
+</div>
+</header>
+<!-- Page Content -->
+<main class="p-margin max-w-[1440px] mx-auto w-full flex-1">
+<!-- Header -->
+<div class="mb-xl flex justify-between items-end">
+<div>
+<h2 class="font-display-lg text-display-lg text-on-surface mb-xs">Add New Images</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Upload assets to the media library</p>
+</div>
+<div class="flex gap-sm">
+<button class="px-md py-sm rounded border border-outline-variant text-on-surface font-title-sm text-title-sm hover:bg-surface-variant transition-colors">Cancel</button>
+<button class="px-md py-sm rounded bg-primary text-on-primary font-title-sm text-title-sm hover:bg-primary-container transition-colors shadow-sm">Upload to Library</button>
+</div>
+</div>
+<!-- Bento Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-lg">
+<!-- Main Upload Area (Spans 2 columns) -->
+<div class="lg:col-span-2 flex flex-col gap-lg">
+<!-- Drag & Drop Zone -->
+<div class="bg-surface-container-lowest border-2 border-dashed border-outline-variant rounded-xl p-xl flex flex-col items-center justify-center text-center hover:bg-surface-container-low transition-colors duration-200 group cursor-pointer h-64">
+<div class="w-16 h-16 rounded-full bg-primary-container/10 flex items-center justify-center mb-md group-hover:scale-110 transition-transform duration-300">
+<span class="material-symbols-outlined text-primary text-4xl" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<h3 class="font-title-sm text-title-sm text-on-surface mb-xs">Click to upload or drag and drop</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">SVG, PNG, JPG or GIF up to 10MB</p>
+</div>
+<!-- Image Details Form (Visible state) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-lg shadow-sm">
+<h3 class="font-title-sm text-title-sm text-on-surface mb-md pb-sm border-b border-outline-variant">Image Details</h3>
+<div class="flex gap-lg">
+<!-- Preview Thumbnail -->
+<div class="w-48 h-48 rounded-lg bg-surface-variant border border-outline-variant overflow-hidden shrink-0">
+<img class="w-full h-full object-cover" data-alt="A clean, abstract geometric shape composition in shades of indigo and slate, representing a placeholder uploaded image. High quality digital art style, soft lighting, minimalist." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCc5anWc_hHKTnbwVwvan18KLPStIRx9_fEGDQQWXL_tmzg2-RCNEpWq6UOWhPzy_gV9QXFE5g_KwGAA7lx32ka1NuoCeJ5Uo9iJtdP5m4mCXe7KcTeZauOKH9gB97_OO8STDDRusKgzd0zCH_2XZVEbSU6WJgUf1fLRmOri-XMk_dJEepVPGORc3fxyiQN40UNppJ3GJ1utLdnvOJSQDWZ3NIKa10DjILxnPYpNBQ2XTqwwBBkWcHJ"/>
+</div>
+<!-- Form Fields -->
+<div class="flex-1 flex flex-col gap-md">
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-xs">Alt Text</label>
+<input class="w-full px-md py-sm rounded border border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none font-body-sm text-body-sm" placeholder="Describe the image..." type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-xs">Category / Folder</label>
+<select class="w-full px-md py-sm rounded border border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none font-body-sm text-body-sm text-on-surface">
+<option>Hero Banners</option>
+<option>Article Thumbnails</option>
+<option>Product Shots</option>
+<option>Uncategorized</option>
+</select>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-xs">Caption</label>
+<textarea class="w-full px-md py-sm rounded border border-outline-variant bg-surface focus:border-primary focus:ring-1 focus:ring-primary outline-none font-body-sm text-body-sm resize-none" placeholder="Optional caption for display..." rows="3"></textarea>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Sidebar Context (Recently Uploaded) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-lg shadow-sm">
+<h3 class="font-title-sm text-title-sm text-on-surface mb-md pb-sm border-b border-outline-variant flex justify-between items-center">
+                        Recently Uploaded
+                        <span class="font-label-caps text-label-caps text-primary cursor-pointer hover:underline">View All</span>
+</h3>
+<div class="grid grid-cols-2 gap-sm">
+<div class="aspect-square rounded border border-outline-variant overflow-hidden group relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A modern, sleek office workspace with a clean desk, laptop, and subtle indigo lighting accents. High resolution, bright and airy, minimalist corporate aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDSgcCwpBZ3Pg6e9afFEi9c72xS12NYD_KnEKLKpl9-LzL-6jjIpm3gTT6cFyBqEORFLCST6mwfj9MQMUS-SvZGZLtA4cqrvIpFtH4Uokf_rl0tr1bLgK9RQwmyY29gkncNq7e-020z8Lcjx2ExIzYoKhD92D5qQ8U2RWHEMmb4Td7olIMmeQ-uOGS5TtmomgHgl9oGnnhINpfNF1JPWrFZ6pd0ZCw5oRS6SCfzPC1rn46_Ezt47QMp"/>
+</div>
+<div class="aspect-square rounded border border-outline-variant overflow-hidden group relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A close-up of abstract data visualizations on a dark slate background with vibrant blue data lines. Technical, crisp, professional dashboard aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDY-XbO2x50Qo9nVsUadN8RVifmVTHRde0sNu81S0WvqlSXuymgOGcKJ83NdDGCM_D-Wok3AmKVQBrm9B9u5GQ2zYiQzHnSsTNRPB1l-2Zdb7DqYckH67OZqqm6CwfgL78epXEUYSuwetexz_E0Gyx_Zh_uWgg8c6XQSzdoXYscyC80KFoWVOiCa_iGKs8M3av5Vd2svqq89oET-U07SOKoxyv3WRh7Hdh5rowbuAHj17G8QgGEvL-f"/>
+</div>
+<div class="aspect-square rounded border border-outline-variant overflow-hidden group relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" data-alt="A group of diverse professionals in a modern glass meeting room, collaborating. Bright natural light, clean composition, corporate stock photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBtYkih9ebmXmZ-vPFwUbTz4bNjLSz7oBzWiECR6nBXvbApUOkJwVlVuhNo8fuB83jNXJvA8ql9QjyAXUuBJ87SknaUasSZ8wtYCbUNidG0--RDDIDYo7bAc6Chr0YdSZNIHpdwp0-u7X6_iFOwKlIm2a1J5rK1E62TsDBnKINQxSeeOW4WXeFEozsCCG1r75-ZuATwNIP6HPQQ5f5KXMKUbDnH8uQntRmQABiH1R-X4j6n2-PxHWmj"/>
+</div>
+<div class="aspect-square rounded border border-outline-variant overflow-hidden bg-surface-variant flex items-center justify-center border-dashed">
+<span class="material-symbols-outlined text-outline-variant text-3xl" data-icon="add_photo_alternate">add_photo_alternate</span>
+</div>
+</div>
+</div>
+</div>
+</main>
+</div>
+</body></html>
