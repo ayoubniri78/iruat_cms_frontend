@@ -11,14 +11,18 @@ defineProps<{
     :type="type ?? 'submit'"
     :disabled="loading"
     :class="[
-      'w-full py-4 text-sm font-black uppercase tracking-widest border-4 border-black disabled:opacity-50 disabled:cursor-not-allowed transition-colors',
+      'w-full py-4 text-sm font-bold uppercase tracking-[0.2em] border-4 border-ink disabled:opacity-50 disabled:cursor-not-allowed transition-all shadow-brutal-sm hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-brutal',
       variant === 'secondary'
-        ? 'bg-white text-black hover:bg-black hover:text-white'
-        : 'bg-[#E53935] text-white hover:bg-[#C62828]',
+        ? 'bg-white text-ink hover:bg-ink hover:text-parchment'
+        : 'bg-accent text-white hover:bg-accent-dark',
     ]"
-    style="box-shadow: 4px 4px 0px 0px #000;"
   >
-    <template v-if="loading">CHARGEMENT...</template>
+    <template v-if="loading">
+      <span class="flex items-center justify-center gap-2">
+        <span class="material-symbols-outlined text-[18px] animate-spin">progress_activity</span>
+        CHARGEMENT...
+      </span>
+    </template>
     <template v-else><slot /></template>
   </button>
 </template>

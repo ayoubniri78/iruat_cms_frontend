@@ -26,7 +26,42 @@ const router = createRouter({
       component: () => import('@/views/DashboardView.vue'),
       meta: { requiresAuth: true },
     },
-    
+    {
+      path: '/types',
+      name: 'types',
+      component: () => import('@/views/TypesView.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/articles',
+      name: 'articles',
+      component: () => import('@/views/ArticlesView.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/articles/create',
+      name: 'article-create',
+      component: () => import('@/views/ArticleCreateView.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/articles/:id',
+      name: 'article-detail',
+      component: () => import('@/views/ArticleDetailView.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/articles/:id/edit',
+      name: 'article-edit',
+      component: () => import('@/views/ArticleEditView.vue'),
+      meta: { requiresAuth: true },
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: () => import('@/views/ProfileView.vue'),
+      meta: { requiresAuth: true },
+    },
   ],
 })
 

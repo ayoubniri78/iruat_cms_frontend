@@ -1,58 +1,79 @@
 <script setup lang="ts">
-import { computed } from 'vue'
-import { useRouter } from 'vue-router'
-import { useAuthStore } from '@/stores/auth.store'
-import BaseButton from '@/components/ui/BaseButton.vue'
+import { onMounted } from 'vue'
+import { useDashboardStore } from '@/stores/dashboard.store'
+import AdminLayout from '@/layouts/AdminLayout.vue'
+import StatCard from '@/components/dashboard/StatCard.vue'
+import RecentArticles from '@/components/dashboard/RecentArticles.vue'
+import AlertMessage from '@/components/ui/AlertMessage.vue'
 
-const router = useRouter()
-const authStore = useAuthStore()
+const dashboardStore = useDashboardStore()
 
-const userEmail = computed(() => authStore.user?.email ?? 'inconnu')
-
-async function handleLogout() {
-  await authStore.logout()
-  router.push('/login')
-}
+onMounted(() => {
+  dashboardStore.fetchDashboard()
+})
 </script>
 
 <template>
-  <div class="min-h-screen bg-[#F5F0E8] font-sans flex items-center justify-center p-4">
-    <div class="w-full max-w-md">
-      <!-- Decorative tape strips -->
-      <div class="relative">
-        <div class="absolute -top-4 left-1/2 -translate-x-1/2 w-24 h-6 bg-[#FFFACD] border border-black/20 rotate-1 z-10"></div>
-        <div class="absolute -top-3 left-8 w-16 h-5 bg-[#FFE4E1] border border-black/20 -rotate-2 z-10"></div>
-      </div>
-
-      <!-- Card -->
-      <div
-        class="bg-white border-4 border-black p-8 pt-10 -rotate-[0.5deg]"
-        style="box-shadow: 6px 6px 0px 0px #000;"
-      >
-        <!-- Stamp badge -->
-        <div class="absolute -top-3 -right-3 bg-[#E53935] text-white border-2 border-black px-3 py-1 text-[10px] font-black uppercase tracking-widest rotate-6">
-          CONNECTÉ
-        </div>
-
-        <h1 class="text-4xl font-black tracking-tight mb-4">Tableau de bord</h1>
-        <p class="text-sm text-gray-500 font-medium mb-6">
-          Connecté en tant que <span class="text-black font-bold">{{ userEmail }}</span>
-        </p>
-
-        <div class="flex flex-col gap-4">
-          <router-link
-            to="/profile"
-            class="block w-full text-center py-4 text-sm font-black uppercase tracking-widest border-4 border-black bg-white text-black hover:bg-black hover:text-white transition-colors"
-            style="box-shadow: 4px 4px 0px 0px #000;"
-          >
-            MON PROFIL
-          </router-link>
-
-          <BaseButton :loading="authStore.loading" @click="handleLogout">
-            DÉCONNEXION
-          </BaseButton>
-        </div>
+  <AdminLayout>
+    <!-- Loading -->
+    <div v-if="dashboardStore.loading" class="flex items-center justify-center py-24">
+      <div class="flex items-center gap-3 text-ink/50">
+        <span class="material-symbols-outlined text-[24px] animate-spin">progress_activity</span>
+        <span class="text-xs font-bold uppercase tracking-[0.2em]">CHARGEMENT...</span>
       </div>
     </div>
-  </div>
+
+    <!-- Error -->
+    <AlertMessage
+      v-else-if="dashboardStore.error"
+      type="error"
+      :message="dashboardStore.error"
+    />
+
+    <!-- Content -->
+    <div v-else>
+      <!-- Page header -->
+      <div class="mb-8">
+        <h1 class="font-display text-2xl sm:text-3xl font-bold text-ink">
+          TABLEAU DE BORD
+        </h1>
+        <p class="text-xs font-bold uppercase tracking-[0.2em] text-ink/50 mt-2">
+          Vue d'ensemble du contenu
+        </p>
+      </div>
+
+      <!-- Stats grid -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8">
+        <StatCard
+          title="TOTAL ARTICLES"
+          :value="dashboardStore.articleCount"
+          icon="description"
+        />
+        <StatCard
+          title="TOTAL TYPES"
+          :value="dashboardStore.typeCount"
+          icon="category"
+        />
+        <router-link to="/articles/create" class="block">
+          <div
+            class="bg-accent border-4 border-ink p-6 shadow-brutal relative overflow-hidden group hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-brutal-lg transition-all cursor-pointer h-full"
+          >
+            <div class="absolute top-0 right-0 w-16 h-16 bg-white/10 -rotate-12 translate-x-4 -translate-y-4" />
+            <span class="material-symbols-outlined text-white/60 text-[32px] mb-4 block">
+              add_circle
+            </span>
+            <p class="text-[10px] font-bold uppercase tracking-[0.2em] text-white/70 mb-1">
+              ACTION RAPIDE
+            </p>
+            <p class="font-display text-lg font-bold text-white">
+              CRÉER UN ARTICLE
+            </p>
+          </div>
+        </router-link>
+      </div>
+
+      <!-- Recent articles -->
+      <RecentArticles :articles="dashboardStore.recentArticles" />
+    </div>
+  </AdminLayout>
 </template>
