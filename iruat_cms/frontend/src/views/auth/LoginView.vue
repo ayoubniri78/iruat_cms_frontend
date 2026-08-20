@@ -23,10 +23,6 @@ async function handleLogin(email: string, password: string) {
   }
 }
 
-async function handleGoogleLogin() {
-  await authStore.loginWithGoogle()
-}
-
 </script>
 
 <template>
@@ -48,7 +44,6 @@ async function handleGoogleLogin() {
       :loading="authStore.loading"
       :error="authStore.error"
       @submit="handleLogin"
-      @google-login="handleGoogleLogin"
     />
   </AuthLayout>
 </template>

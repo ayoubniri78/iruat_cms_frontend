@@ -39,34 +39,6 @@ export const useAuthStore = defineStore('auth', () => {
     })
   }
 
-  async function register(email: string, password: string, firstName: string, lastName: string): Promise<{ success: boolean; error?: string }> {
-    loading.value = true
-    error.value = ''
-
-    try {
-      const result = await authService.register(email, password, firstName, lastName)
-
-      if (result.error) {
-        error.value = result.error.message
-        return { success: false, error: result.error.message }
-      }
-
-      if (result.data?.user?.identities?.length === 0) {
-        const msg = 'Un compte existe déjà avec cette adresse e-mail.'
-        error.value = msg
-        return { success: false, error: msg }
-      }
-
-      return { success: true }
-    } catch (e: unknown) {
-      const msg = e instanceof Error ? e.message : 'Erreur lors de l\'inscription.'
-      error.value = msg
-      return { success: false, error: msg }
-    } finally {
-      loading.value = false
-    }
-  }
-
   async function login(email: string, password: string): Promise<{ success: boolean; error?: string }> {
     loading.value = true
     error.value = ''
@@ -83,28 +55,6 @@ export const useAuthStore = defineStore('auth', () => {
       return { success: true }
     } catch (e: unknown) {
       const msg = e instanceof Error ? e.message : 'Erreur lors de la connexion.'
-      error.value = msg
-      return { success: false, error: msg }
-    } finally {
-      loading.value = false
-    }
-  }
-
-  async function loginWithGoogle(): Promise<{ success: boolean; error?: string }> {
-    loading.value = true
-    error.value = ''
-
-    try {
-      const result = await authService.loginWithGoogle()
-
-      if (result.error) {
-        error.value = result.error.message
-        return { success: false, error: result.error.message }
-      }
-
-      return { success: true }
-    } catch (e: unknown) {
-      const msg = e instanceof Error ? e.message : 'Erreur lors de la connexion avec Google.'
       error.value = msg
       return { success: false, error: msg }
     } finally {
@@ -135,9 +85,7 @@ export const useAuthStore = defineStore('auth', () => {
     loading,
     error,
     initializeAuth,
-    register,
     login,
-    loginWithGoogle,
     logout,
   }
 })

@@ -3,7 +3,6 @@ import { ref } from 'vue'
 import BaseInput from '@/components/ui/BaseInput.vue'
 import BaseButton from '@/components/ui/BaseButton.vue'
 import AlertMessage from '@/components/ui/AlertMessage.vue'
-import GoogleLoginButton from '@/components/auth/GoogleLoginButton.vue'
 
 defineProps<{
   loading?: boolean
@@ -12,7 +11,6 @@ defineProps<{
 
 const emit = defineEmits<{
   submit: [email: string, password: string]
-  googleLogin: []
 }>()
 
 const email = ref('')
@@ -46,14 +44,5 @@ function handleSubmit() {
     <BaseButton :loading="loading">
       SE CONNECTER
     </BaseButton>
-
-    <GoogleLoginButton :loading="loading" @click="$emit('googleLogin')" />
-
-    <p class="mt-6 text-center text-sm text-gray-500 font-medium">
-      Pas encore de compte ?
-      <router-link to="/register" class="text-[#E53935] font-black uppercase tracking-wider hover:underline">
-        S'inscrire
-      </router-link>
-    </p>
   </form>
 </template>
